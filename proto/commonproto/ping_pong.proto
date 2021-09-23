@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package commonproto;
+
+option go_package = "github.com/dysnix/ai-proto/external/proto/commonproto";
+
+import "google/protobuf/timestamp.proto";
+
+message Ping {
+  google.protobuf.Timestamp Time = 1;
+}
+
+message Pong {
+  google.protobuf.Timestamp Next = 1;
+  string message = 2;
+}
