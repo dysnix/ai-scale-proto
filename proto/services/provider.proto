@@ -26,6 +26,7 @@ message ReqGetMetrics {
   enums.ResourceType Resource = 1;
   string Name = 2;
   string Namespace = 3;
+  string Cluster = 4;
   oneof Query {
     events.History History = 4;
   }
