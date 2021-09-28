@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package commonproto;
 
-option go_package = "github.com/dysnix/ai-proto/external/proto/commonproto";
+option go_package = "github.com/dysnix/ai-scale-proto/external/proto/commonproto";
 
 import "google/protobuf/timestamp.proto";
 

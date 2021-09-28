@@ -1,4 +1,4 @@
-module github.com/dysnix/ai-proto
+module github.com/dysnix/ai-scale-proto
 
 go 1.16
 

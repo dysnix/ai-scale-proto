@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package ping_pong;
 
-option go_package = "github.com/dysnix/ai-proto/external/proto/services";
+option go_package = "github.com/dysnix/ai-scale-proto/external/proto/services";
 
 import "proto/commonproto/ping_pong.proto";
 import "proto/commonproto/empty.proto";
@@ -28,7 +28,7 @@ message ReqGetMetrics {
   string Namespace = 3;
   string Cluster = 4;
   oneof Query {
-    events.History History = 4;
+    events.History History = 5;
   }
 }
 
