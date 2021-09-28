@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package events;
+
+option go_package = "github.com/dysnix/ai-scale-proto/external/proto/events";
+
+import "proto/enums/provider.proto";
+
+message History {
+  repeated enums.PeriodType period = 1;
+  repeated enums.MetricsType metrics = 2;
+}
+
