@@ -8,6 +8,7 @@ import "proto/commonproto/ping_pong.proto";
 import "proto/commonproto/metric_value.proto";
 import "proto/events/provider.proto";
 import "proto/enums/provider.proto";
+import "google/protobuf/duration.proto";
 
 service ProviderService {
   rpc Ping(ReqPing) returns (ResPong) {}
@@ -27,8 +28,9 @@ message ReqGetMetrics {
   string name = 2;
   string namespace = 3;
   string cluster = 4;
+  google.protobuf.Duration timeWindow = 5;
   oneof Query {
-    events.History history = 5;
+    events.History history = 6;
   }
 }
 

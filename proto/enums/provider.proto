@@ -23,3 +23,10 @@ enum ResourceType {
   StatefulSet = 1;
   DaemonSet = 2;
 }
+
+enum ValueType {
+  Matrix = 0;
+  Vector = 1;
+  Scalar = 2;
+  String = 3;
+}
