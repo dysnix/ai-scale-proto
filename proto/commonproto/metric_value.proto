@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package commonproto;
+
+option go_package = "github.com/dysnix/ai-scale-proto/external/proto/commonproto";
+
+import "proto/enums/provider.proto";
+
+message MetricValue {
+  enums.PeriodType period = 1;
+  enums.MetricsType metric_type = 2;
+  string values = 3;
+  string prometheus_response_type = 4;
+}
