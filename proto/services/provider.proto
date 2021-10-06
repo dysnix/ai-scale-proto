@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package ping_pong;
+package services;
 
 option go_package = "github.com/dysnix/ai-scale-proto/external/proto/services";
 
@@ -28,9 +28,10 @@ message ReqGetMetrics {
   string name = 2;
   string namespace = 3;
   string cluster = 4;
-  google.protobuf.Duration timeWindow = 5;
+  google.protobuf.Duration stepDuration = 5;
+  google.protobuf.Duration timeWindow = 6;
   oneof Query {
-    events.History history = 6;
+    events.History history = 7;
   }
 }
 
