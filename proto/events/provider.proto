@@ -4,7 +4,18 @@ package events;
 
 option go_package = "github.com/dysnix/ai-scale-proto/external/proto/events";
 
+import "google/protobuf/timestamp.proto";
 import "proto/enums/provider.proto";
+
+message QueryRange {
+  google.protobuf.Timestamp start_time = 1;
+  google.protobuf.Timestamp end_time = 2;
+}
+
+message RawQuery {
+  string body = 1;
+  QueryRange range = 2;
+}
 
 message History {
   repeated enums.PeriodType period = 1;

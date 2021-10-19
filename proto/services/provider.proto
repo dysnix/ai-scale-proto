@@ -32,6 +32,7 @@ message ReqGetMetrics {
   google.protobuf.Duration timeWindow = 6;
   oneof Query {
     events.History history = 7;
+    events.RawQuery raw = 8;
   }
 }
 
