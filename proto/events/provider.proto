@@ -15,6 +15,7 @@ message QueryRange {
 message RawQuery {
   string body = 1;
   QueryRange range = 2;
+  google.protobuf.Timestamp given_time = 3;
 }
 
 message History {
