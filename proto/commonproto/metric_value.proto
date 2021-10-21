@@ -13,6 +13,11 @@ message MetricValue {
   repeated Item values = 3;
 }
 
+message RawMetricValue {
+  enums.ValueType prometheus_response_type = 1;
+  repeated Item values = 2;
+}
+
 message Item {
   google.protobuf.Timestamp timestamp = 1;
   double value = 2;

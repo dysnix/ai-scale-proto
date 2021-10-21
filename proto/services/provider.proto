@@ -13,6 +13,7 @@ import "google/protobuf/duration.proto";
 service ProviderService {
   rpc Ping(ReqPing) returns (ResPong) {}
   rpc GetMetrics(ReqGetMetrics) returns (ResGetMetrics) {}
+  rpc GetRawQueryMetrics(ReqRawQueryMetrics) returns (ResRawQueryMetrics) {}
 }
 
 message ReqPing {
@@ -32,10 +33,20 @@ message ReqGetMetrics {
   google.protobuf.Duration timeWindow = 6;
   oneof Query {
     events.History history = 7;
-    events.RawQuery raw = 8;
   }
 }
 
 message ResGetMetrics {
   repeated commonproto.MetricValue metric_values = 1;
+}
+
+message ReqRawQueryMetrics {
+  string name = 1;
+  string namespace = 2;
+  string cluster = 3;
+  events.RawQuery raw = 4;
+}
+
+message ResRawQueryMetrics {
+  repeated commonproto.RawMetricValue metric_values = 1;
 }
