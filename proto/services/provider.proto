@@ -44,7 +44,8 @@ message ReqRawQueryMetrics {
   string name = 1;
   string namespace = 2;
   string cluster = 3;
-  events.RawQuery raw = 4;
+  google.protobuf.Duration stepDuration = 4;
+  events.RawQuery raw = 5;
 }
 
 message ResRawQueryMetrics {
