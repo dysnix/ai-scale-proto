@@ -14,8 +14,9 @@ message MetricValue {
 }
 
 message RawMetricValue {
-  enums.ValueType prometheus_response_type = 1;
-  repeated Item values = 2;
+  string name = 1;
+  enums.ValueType prometheus_response_type = 2;
+  repeated Item values = 3;
 }
 
 message Item {
