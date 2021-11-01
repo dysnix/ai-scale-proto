@@ -156,8 +156,8 @@ type ReqSendMetrics struct {
 	unknownFields protoimpl.UnknownFields
 
 	Header        *Header                    `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
-	MetricsOffset uint64                     `protobuf:"varint,2,opt,name=metrics_offset,json=metricsOffset,proto3" json:"metrics_offset,omitempty" faker:"unix_time"` // @gotags: faker:"unix_time"
-	MetricValues  []*commonproto.MetricValue `protobuf:"bytes,3,rep,name=metric_values,json=metricValues,proto3" json:"metric_values,omitempty"`                       // faker:"metricsSlice"
+	MetricsOffset uint64                     `protobuf:"varint,2,opt,name=metrics_offset,json=metricsOffset,proto3" json:"metrics_offset,omitempty" faker:"unixTime"` // @gotags: faker:"unixTime"
+	MetricValues  []*commonproto.MetricValue `protobuf:"bytes,3,rep,name=metric_values,json=metricValues,proto3" json:"metric_values,omitempty"`                      // faker:"metricsSlice"
 }
 
 func (x *ReqSendMetrics) Reset() {
