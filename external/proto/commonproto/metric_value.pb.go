@@ -32,8 +32,8 @@ type MetricValue struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	MetricType             enums.MetricsType `protobuf:"varint,1,opt,name=metric_type,json=metricType,proto3,enum=enums.MetricsType" json:"metric_type,omitempty"`
-	PrometheusResponseType enums.ValueType   `protobuf:"varint,2,opt,name=prometheus_response_type,json=prometheusResponseType,proto3,enum=enums.ValueType" json:"prometheus_response_type,omitempty"`
+	MetricType             enums.MetricsType `protobuf:"varint,1,opt,name=metric_type,json=metricType,proto3,enum=enums.MetricsType" json:"metric_type,omitempty"`                                     // faker:"oneof: 0 1 2 3 4 5 6"
+	PrometheusResponseType enums.ValueType   `protobuf:"varint,2,opt,name=prometheus_response_type,json=prometheusResponseType,proto3,enum=enums.ValueType" json:"prometheus_response_type,omitempty"` // faker:"oneof: 0 1 2 3"
 	Values                 []*Item           `protobuf:"bytes,3,rep,name=values,proto3" json:"values,omitempty"`
 }
 
@@ -159,7 +159,7 @@ type Item struct {
 	unknownFields protoimpl.UnknownFields
 
 	Timestamp *timestamp.Timestamp `protobuf:"bytes,1,opt,name=timestamp,proto3" json:"timestamp,omitempty"`
-	Value     float64              `protobuf:"fixed64,2,opt,name=value,proto3" json:"value,omitempty"`
+	Value     float64              `protobuf:"fixed64,2,opt,name=value,proto3" json:"value,omitempty"` // faker:"long"
 }
 
 func (x *Item) Reset() {

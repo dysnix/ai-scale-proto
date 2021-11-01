@@ -15,7 +15,7 @@ service GatewaySaverService {
 }
 
 message Header {
-  string cluster_id = 1;
+  string cluster_id = 1; // @gotags: faker:"uuid_hyphenated"
 }
 
 message ForecastHeader {
@@ -27,8 +27,8 @@ message ForecastHeader {
 
 message ReqSendMetrics {
   Header header = 1;
-  uint64 metrics_offset = 2;
-  repeated commonproto.MetricValue metric_values = 3;
+  uint64 metrics_offset = 2; // @gotags: faker:"unix_time"
+  repeated commonproto.MetricValue metric_values = 3; // faker:"metricsSlice"
 }
 
 message ReqGetMetricsOffset {

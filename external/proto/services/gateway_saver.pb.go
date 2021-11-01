@@ -37,7 +37,7 @@ type Header struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	ClusterId string `protobuf:"bytes,1,opt,name=cluster_id,json=clusterId,proto3" json:"cluster_id,omitempty"`
+	ClusterId string `protobuf:"bytes,1,opt,name=cluster_id,json=clusterId,proto3" json:"cluster_id,omitempty" faker:"uuid_hyphenated"` // @gotags: faker:"uuid_hyphenated"
 }
 
 func (x *Header) Reset() {
@@ -156,8 +156,8 @@ type ReqSendMetrics struct {
 	unknownFields protoimpl.UnknownFields
 
 	Header        *Header                    `protobuf:"bytes,1,opt,name=header,proto3" json:"header,omitempty"`
-	MetricsOffset uint64                     `protobuf:"varint,2,opt,name=metrics_offset,json=metricsOffset,proto3" json:"metrics_offset,omitempty"`
-	MetricValues  []*commonproto.MetricValue `protobuf:"bytes,3,rep,name=metric_values,json=metricValues,proto3" json:"metric_values,omitempty"`
+	MetricsOffset uint64                     `protobuf:"varint,2,opt,name=metrics_offset,json=metricsOffset,proto3" json:"metrics_offset,omitempty" faker:"unix_time"` // @gotags: faker:"unix_time"
+	MetricValues  []*commonproto.MetricValue `protobuf:"bytes,3,rep,name=metric_values,json=metricValues,proto3" json:"metric_values,omitempty"`                       // faker:"metricsSlice"
 }
 
 func (x *ReqSendMetrics) Reset() {
