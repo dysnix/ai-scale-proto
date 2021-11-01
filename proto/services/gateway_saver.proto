@@ -27,7 +27,7 @@ message ForecastHeader {
 
 message ReqSendMetrics {
   Header header = 1;
-  uint64 metrics_offset = 2; // @gotags: faker:"unix_time"
+  uint64 metrics_offset = 2; // @gotags: faker:"unixTime"
   repeated commonproto.MetricValue metric_values = 3; // faker:"metricsSlice"
 }
 
