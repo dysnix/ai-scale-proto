@@ -15,7 +15,7 @@ service GatewaySaverService {
 }
 
 message Header {
-  string cluster_id = 1; // @gotags: faker:"uuid_hyphenated"
+  string cluster_id = 1; // @gotags: faker:"uuidHyphenated"
 }
 
 message ForecastHeader {

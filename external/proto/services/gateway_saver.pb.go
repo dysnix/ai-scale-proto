@@ -37,7 +37,7 @@ type Header struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	ClusterId string `protobuf:"bytes,1,opt,name=cluster_id,json=clusterId,proto3" json:"cluster_id,omitempty" faker:"uuid_hyphenated"` // @gotags: faker:"uuid_hyphenated"
+	ClusterId string `protobuf:"bytes,1,opt,name=cluster_id,json=clusterId,proto3" json:"cluster_id,omitempty" faker:"uuidHyphenated"` // @gotags: faker:"uuidHyphenated"
 }
 
 func (x *Header) Reset() {
