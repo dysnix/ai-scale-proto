@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package events;
+
+option go_package = "github.com/dysnix/ai-scale-proto/external/proto/events";
+
+import "proto/enums/provider.proto";
+
+message Client {
+  string name = 1; // @gotags: validate:"ascii"
+  string cluster_id = 2; // @gotags: validate:"uuid"
+  bytes rsa_key = 3;
+  enums.KeyType key_type = 4;
+}

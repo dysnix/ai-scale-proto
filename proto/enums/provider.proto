@@ -32,3 +32,9 @@ enum ValueType {
   Scalar = 2;
   String = 3;
 }
+
+enum KeyType {
+  HS256 = 0;
+  HS384 = 1;
+  HS512 = 2;
+}

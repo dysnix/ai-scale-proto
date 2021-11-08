@@ -22,4 +22,3 @@ message History {
   repeated enums.PeriodType period = 1;
   repeated enums.MetricsType metrics = 2;
 }
-
