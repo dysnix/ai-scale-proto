@@ -8,7 +8,7 @@ import "proto/enums/provider.proto";
 
 message Client {
   string name = 1; // @gotags: validate:"ascii"
-  string cluster_id = 2; // @gotags: validate:"omitempty,uuid"
+  string cluster_id = 2; // @gotags: validate:"omitempty,uuid_if_not_empty"
   bytes rsa_key = 3;
   enums.KeyType key_type = 4;
 }

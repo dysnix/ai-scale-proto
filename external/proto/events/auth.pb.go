@@ -31,8 +31,8 @@ type Client struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Name      string        `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty" validate:"ascii"`                                     // @gotags: validate:"ascii"
-	ClusterId string        `protobuf:"bytes,2,opt,name=cluster_id,json=clusterId,proto3" json:"cluster_id,omitempty" validate:"omitempty,uuid"` // @gotags: validate:"omitempty,uuid"
+	Name      string        `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty" validate:"ascii"`                                                  // @gotags: validate:"ascii"
+	ClusterId string        `protobuf:"bytes,2,opt,name=cluster_id,json=clusterId,proto3" json:"cluster_id,omitempty" validate:"omitempty,uuid_if_not_empty"` // @gotags: validate:"omitempty,uuid_if_not_empty"
 	RsaKey    []byte        `protobuf:"bytes,3,opt,name=rsa_key,json=rsaKey,proto3" json:"rsa_key,omitempty"`
 	KeyType   enums.KeyType `protobuf:"varint,4,opt,name=key_type,json=keyType,proto3,enum=enums.KeyType" json:"key_type,omitempty"`
 }
