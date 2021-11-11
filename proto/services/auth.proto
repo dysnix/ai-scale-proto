@@ -23,7 +23,11 @@ message ReqCreateClient {
 message ResCreateClient {}
 
 message ReqInvalidateAllTokens {
-  events.Client client = 1;
+  oneof ClientData {
+    string name = 1;
+    string cluster_id = 2;
+  }
+  uint32 bites = 3;
 }
 
 message ResInvalidateAllTokens {
