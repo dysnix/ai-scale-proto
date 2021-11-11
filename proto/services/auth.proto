@@ -13,6 +13,7 @@ service AuthService {
   rpc DeleteClient(ReqDeleteClient) returns (ResDeleteClient) {}
   rpc GenerateToken(ReqGenerateToken) returns (ResGenerateToken) {}
   rpc RefreshToken(ReqRefreshToken) returns (ResRefreshToken) {}
+  rpc InvalidateAllTokens(ReqInvalidateAllTokens) returns (ResInvalidateAllTokens) {}
 }
 
 message ReqCreateClient {
@@ -20,6 +21,14 @@ message ReqCreateClient {
 }
 
 message ResCreateClient {}
+
+message ReqInvalidateAllTokens {
+  events.Client client = 1;
+}
+
+message ResInvalidateAllTokens {
+  bytes rsa_key = 1;
+}
 
 message ReqUpdateClient {
   events.Client client = 1;
