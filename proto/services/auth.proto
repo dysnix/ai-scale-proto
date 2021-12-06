@@ -6,6 +6,7 @@ option go_package = "github.com/dysnix/ai-scale-proto/external/proto/services";
 
 import "proto/events/auth.proto";
 import "google/protobuf/duration.proto";
+import "proto/enums/auth.proto";
 
 service AuthService {
   rpc CreateClient(ReqCreateClient) returns (ResCreateClient) {}
@@ -45,6 +46,7 @@ message ReqDeleteClient {
     string name = 1;
     string cluster_id = 2;
   }
+  enums.DeleteType delete_type = 3;
 }
 
 message ResDeleteClient {}
