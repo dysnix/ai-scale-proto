@@ -741,6 +741,133 @@ func (x *ResRefreshToken) GetToken() string {
 	return ""
 }
 
+type ReqGetClientData struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	// Types that are assignable to ClientData:
+	//	*ReqGetClientData_Name
+	//	*ReqGetClientData_ClusterId
+	ClientData isReqGetClientData_ClientData `protobuf_oneof:"ClientData"`
+}
+
+func (x *ReqGetClientData) Reset() {
+	*x = ReqGetClientData{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_proto_services_auth_proto_msgTypes[12]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ReqGetClientData) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ReqGetClientData) ProtoMessage() {}
+
+func (x *ReqGetClientData) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_services_auth_proto_msgTypes[12]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ReqGetClientData.ProtoReflect.Descriptor instead.
+func (*ReqGetClientData) Descriptor() ([]byte, []int) {
+	return file_proto_services_auth_proto_rawDescGZIP(), []int{12}
+}
+
+func (m *ReqGetClientData) GetClientData() isReqGetClientData_ClientData {
+	if m != nil {
+		return m.ClientData
+	}
+	return nil
+}
+
+func (x *ReqGetClientData) GetName() string {
+	if x, ok := x.GetClientData().(*ReqGetClientData_Name); ok {
+		return x.Name
+	}
+	return ""
+}
+
+func (x *ReqGetClientData) GetClusterId() string {
+	if x, ok := x.GetClientData().(*ReqGetClientData_ClusterId); ok {
+		return x.ClusterId
+	}
+	return ""
+}
+
+type isReqGetClientData_ClientData interface {
+	isReqGetClientData_ClientData()
+}
+
+type ReqGetClientData_Name struct {
+	Name string `protobuf:"bytes,1,opt,name=name,proto3,oneof"`
+}
+
+type ReqGetClientData_ClusterId struct {
+	ClusterId string `protobuf:"bytes,2,opt,name=cluster_id,json=clusterId,proto3,oneof"`
+}
+
+func (*ReqGetClientData_Name) isReqGetClientData_ClientData() {}
+
+func (*ReqGetClientData_ClusterId) isReqGetClientData_ClientData() {}
+
+type ResGetClientData struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Client *events.Client `protobuf:"bytes,1,opt,name=client,proto3" json:"client,omitempty"`
+}
+
+func (x *ResGetClientData) Reset() {
+	*x = ResGetClientData{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_proto_services_auth_proto_msgTypes[13]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ResGetClientData) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ResGetClientData) ProtoMessage() {}
+
+func (x *ResGetClientData) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_services_auth_proto_msgTypes[13]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ResGetClientData.ProtoReflect.Descriptor instead.
+func (*ResGetClientData) Descriptor() ([]byte, []int) {
+	return file_proto_services_auth_proto_rawDescGZIP(), []int{13}
+}
+
+func (x *ResGetClientData) GetClient() *events.Client {
+	if x != nil {
+		return x.Client
+	}
+	return nil
+}
+
 var File_proto_services_auth_proto protoreflect.FileDescriptor
 
 var file_proto_services_auth_proto_rawDesc = []byte{
@@ -807,21 +934,35 @@ var file_proto_services_auth_proto_rawDesc = []byte{
 	0x6c, 0x69, 0x65, 0x6e, 0x74, 0x44, 0x61, 0x74, 0x61, 0x22, 0x27, 0x0a, 0x0f, 0x52, 0x65, 0x73,
 	0x52, 0x65, 0x66, 0x72, 0x65, 0x73, 0x68, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x12, 0x14, 0x0a, 0x05,
 	0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x74, 0x6f, 0x6b,
-	0x65, 0x6e, 0x32, 0xd5, 0x03, 0x0a, 0x0b, 0x41, 0x75, 0x74, 0x68, 0x53, 0x65, 0x72, 0x76, 0x69,
-	0x63, 0x65, 0x12, 0x46, 0x0a, 0x0c, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x43, 0x6c, 0x69, 0x65,
-	0x6e, 0x74, 0x12, 0x19, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x52, 0x65,
-	0x71, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x43, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x1a, 0x19, 0x2e,
-	0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x52, 0x65, 0x73, 0x43, 0x72, 0x65, 0x61,
-	0x74, 0x65, 0x43, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x22, 0x00, 0x12, 0x46, 0x0a, 0x0c, 0x55, 0x70,
-	0x64, 0x61, 0x74, 0x65, 0x43, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x12, 0x19, 0x2e, 0x73, 0x65, 0x72,
-	0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x52, 0x65, 0x71, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x43,
-	0x6c, 0x69, 0x65, 0x6e, 0x74, 0x1a, 0x19, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73,
-	0x2e, 0x52, 0x65, 0x73, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x43, 0x6c, 0x69, 0x65, 0x6e, 0x74,
-	0x22, 0x00, 0x12, 0x46, 0x0a, 0x0c, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x43, 0x6c, 0x69, 0x65,
-	0x6e, 0x74, 0x12, 0x19, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x52, 0x65,
-	0x71, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x43, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x1a, 0x19, 0x2e,
-	0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x52, 0x65, 0x73, 0x44, 0x65, 0x6c, 0x65,
-	0x74, 0x65, 0x43, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x22, 0x00, 0x12, 0x49, 0x0a, 0x0d, 0x47, 0x65,
+	0x65, 0x6e, 0x22, 0x57, 0x0a, 0x10, 0x52, 0x65, 0x71, 0x47, 0x65, 0x74, 0x43, 0x6c, 0x69, 0x65,
+	0x6e, 0x74, 0x44, 0x61, 0x74, 0x61, 0x12, 0x14, 0x0a, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x01,
+	0x20, 0x01, 0x28, 0x09, 0x48, 0x00, 0x52, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x12, 0x1f, 0x0a, 0x0a,
+	0x63, 0x6c, 0x75, 0x73, 0x74, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09,
+	0x48, 0x00, 0x52, 0x09, 0x63, 0x6c, 0x75, 0x73, 0x74, 0x65, 0x72, 0x49, 0x64, 0x42, 0x0c, 0x0a,
+	0x0a, 0x43, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x44, 0x61, 0x74, 0x61, 0x22, 0x3a, 0x0a, 0x10, 0x52,
+	0x65, 0x73, 0x47, 0x65, 0x74, 0x43, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x44, 0x61, 0x74, 0x61, 0x12,
+	0x26, 0x0a, 0x06, 0x63, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32,
+	0x0e, 0x2e, 0x65, 0x76, 0x65, 0x6e, 0x74, 0x73, 0x2e, 0x43, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x52,
+	0x06, 0x63, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x32, 0xa0, 0x04, 0x0a, 0x0b, 0x41, 0x75, 0x74, 0x68,
+	0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x46, 0x0a, 0x0c, 0x43, 0x72, 0x65, 0x61, 0x74,
+	0x65, 0x43, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x12, 0x19, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63,
+	0x65, 0x73, 0x2e, 0x52, 0x65, 0x71, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x43, 0x6c, 0x69, 0x65,
+	0x6e, 0x74, 0x1a, 0x19, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x52, 0x65,
+	0x73, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x43, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x22, 0x00, 0x12,
+	0x46, 0x0a, 0x0c, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x43, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x12,
+	0x19, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x52, 0x65, 0x71, 0x55, 0x70,
+	0x64, 0x61, 0x74, 0x65, 0x43, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x1a, 0x19, 0x2e, 0x73, 0x65, 0x72,
+	0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x52, 0x65, 0x73, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x43,
+	0x6c, 0x69, 0x65, 0x6e, 0x74, 0x22, 0x00, 0x12, 0x46, 0x0a, 0x0c, 0x44, 0x65, 0x6c, 0x65, 0x74,
+	0x65, 0x43, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x12, 0x19, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63,
+	0x65, 0x73, 0x2e, 0x52, 0x65, 0x71, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x43, 0x6c, 0x69, 0x65,
+	0x6e, 0x74, 0x1a, 0x19, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x52, 0x65,
+	0x73, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x43, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x22, 0x00, 0x12,
+	0x49, 0x0a, 0x0d, 0x47, 0x65, 0x74, 0x43, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x44, 0x61, 0x74, 0x61,
+	0x12, 0x1a, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x52, 0x65, 0x71, 0x47,
+	0x65, 0x74, 0x43, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x44, 0x61, 0x74, 0x61, 0x1a, 0x1a, 0x2e, 0x73,
+	0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x52, 0x65, 0x73, 0x47, 0x65, 0x74, 0x43, 0x6c,
+	0x69, 0x65, 0x6e, 0x74, 0x44, 0x61, 0x74, 0x61, 0x22, 0x00, 0x12, 0x49, 0x0a, 0x0d, 0x47, 0x65,
 	0x6e, 0x65, 0x72, 0x61, 0x74, 0x65, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x12, 0x1a, 0x2e, 0x73, 0x65,
 	0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x52, 0x65, 0x71, 0x47, 0x65, 0x6e, 0x65, 0x72, 0x61,
 	0x74, 0x65, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x1a, 0x1a, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63,
@@ -855,7 +996,7 @@ func file_proto_services_auth_proto_rawDescGZIP() []byte {
 	return file_proto_services_auth_proto_rawDescData
 }
 
-var file_proto_services_auth_proto_msgTypes = make([]protoimpl.MessageInfo, 12)
+var file_proto_services_auth_proto_msgTypes = make([]protoimpl.MessageInfo, 14)
 var file_proto_services_auth_proto_goTypes = []interface{}{
 	(*ReqCreateClient)(nil),        // 0: services.ReqCreateClient
 	(*ResCreateClient)(nil),        // 1: services.ResCreateClient
@@ -869,33 +1010,38 @@ var file_proto_services_auth_proto_goTypes = []interface{}{
 	(*ResGenerateToken)(nil),       // 9: services.ResGenerateToken
 	(*ReqRefreshToken)(nil),        // 10: services.ReqRefreshToken
 	(*ResRefreshToken)(nil),        // 11: services.ResRefreshToken
-	(*events.Client)(nil),          // 12: events.Client
-	(enums.DeleteType)(0),          // 13: enums.DeleteType
-	(*duration.Duration)(nil),      // 14: google.protobuf.Duration
+	(*ReqGetClientData)(nil),       // 12: services.ReqGetClientData
+	(*ResGetClientData)(nil),       // 13: services.ResGetClientData
+	(*events.Client)(nil),          // 14: events.Client
+	(enums.DeleteType)(0),          // 15: enums.DeleteType
+	(*duration.Duration)(nil),      // 16: google.protobuf.Duration
 }
 var file_proto_services_auth_proto_depIdxs = []int32{
-	12, // 0: services.ReqCreateClient.client:type_name -> events.Client
-	12, // 1: services.ReqUpdateClient.client:type_name -> events.Client
-	13, // 2: services.ReqDeleteClient.delete_type:type_name -> enums.DeleteType
-	14, // 3: services.ReqGenerateToken.ext_duration:type_name -> google.protobuf.Duration
-	14, // 4: services.ReqRefreshToken.ext_duration:type_name -> google.protobuf.Duration
-	0,  // 5: services.AuthService.CreateClient:input_type -> services.ReqCreateClient
-	4,  // 6: services.AuthService.UpdateClient:input_type -> services.ReqUpdateClient
-	6,  // 7: services.AuthService.DeleteClient:input_type -> services.ReqDeleteClient
-	8,  // 8: services.AuthService.GenerateToken:input_type -> services.ReqGenerateToken
-	10, // 9: services.AuthService.RefreshToken:input_type -> services.ReqRefreshToken
-	2,  // 10: services.AuthService.InvalidateAllTokens:input_type -> services.ReqInvalidateAllTokens
-	1,  // 11: services.AuthService.CreateClient:output_type -> services.ResCreateClient
-	5,  // 12: services.AuthService.UpdateClient:output_type -> services.ResUpdateClient
-	7,  // 13: services.AuthService.DeleteClient:output_type -> services.ResDeleteClient
-	9,  // 14: services.AuthService.GenerateToken:output_type -> services.ResGenerateToken
-	11, // 15: services.AuthService.RefreshToken:output_type -> services.ResRefreshToken
-	3,  // 16: services.AuthService.InvalidateAllTokens:output_type -> services.ResInvalidateAllTokens
-	11, // [11:17] is the sub-list for method output_type
-	5,  // [5:11] is the sub-list for method input_type
-	5,  // [5:5] is the sub-list for extension type_name
-	5,  // [5:5] is the sub-list for extension extendee
-	0,  // [0:5] is the sub-list for field type_name
+	14, // 0: services.ReqCreateClient.client:type_name -> events.Client
+	14, // 1: services.ReqUpdateClient.client:type_name -> events.Client
+	15, // 2: services.ReqDeleteClient.delete_type:type_name -> enums.DeleteType
+	16, // 3: services.ReqGenerateToken.ext_duration:type_name -> google.protobuf.Duration
+	16, // 4: services.ReqRefreshToken.ext_duration:type_name -> google.protobuf.Duration
+	14, // 5: services.ResGetClientData.client:type_name -> events.Client
+	0,  // 6: services.AuthService.CreateClient:input_type -> services.ReqCreateClient
+	4,  // 7: services.AuthService.UpdateClient:input_type -> services.ReqUpdateClient
+	6,  // 8: services.AuthService.DeleteClient:input_type -> services.ReqDeleteClient
+	12, // 9: services.AuthService.GetClientData:input_type -> services.ReqGetClientData
+	8,  // 10: services.AuthService.GenerateToken:input_type -> services.ReqGenerateToken
+	10, // 11: services.AuthService.RefreshToken:input_type -> services.ReqRefreshToken
+	2,  // 12: services.AuthService.InvalidateAllTokens:input_type -> services.ReqInvalidateAllTokens
+	1,  // 13: services.AuthService.CreateClient:output_type -> services.ResCreateClient
+	5,  // 14: services.AuthService.UpdateClient:output_type -> services.ResUpdateClient
+	7,  // 15: services.AuthService.DeleteClient:output_type -> services.ResDeleteClient
+	13, // 16: services.AuthService.GetClientData:output_type -> services.ResGetClientData
+	9,  // 17: services.AuthService.GenerateToken:output_type -> services.ResGenerateToken
+	11, // 18: services.AuthService.RefreshToken:output_type -> services.ResRefreshToken
+	3,  // 19: services.AuthService.InvalidateAllTokens:output_type -> services.ResInvalidateAllTokens
+	13, // [13:20] is the sub-list for method output_type
+	6,  // [6:13] is the sub-list for method input_type
+	6,  // [6:6] is the sub-list for extension type_name
+	6,  // [6:6] is the sub-list for extension extendee
+	0,  // [0:6] is the sub-list for field type_name
 }
 
 func init() { file_proto_services_auth_proto_init() }
@@ -1048,6 +1194,30 @@ func file_proto_services_auth_proto_init() {
 				return nil
 			}
 		}
+		file_proto_services_auth_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ReqGetClientData); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_proto_services_auth_proto_msgTypes[13].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ResGetClientData); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	file_proto_services_auth_proto_msgTypes[2].OneofWrappers = []interface{}{
 		(*ReqInvalidateAllTokens_Name)(nil),
@@ -1065,13 +1235,17 @@ func file_proto_services_auth_proto_init() {
 		(*ReqRefreshToken_Name)(nil),
 		(*ReqRefreshToken_ClusterId)(nil),
 	}
+	file_proto_services_auth_proto_msgTypes[12].OneofWrappers = []interface{}{
+		(*ReqGetClientData_Name)(nil),
+		(*ReqGetClientData_ClusterId)(nil),
+	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_proto_services_auth_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   12,
+			NumMessages:   14,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
@@ -1100,6 +1274,7 @@ type AuthServiceClient interface {
 	CreateClient(ctx context.Context, in *ReqCreateClient, opts ...grpc.CallOption) (*ResCreateClient, error)
 	UpdateClient(ctx context.Context, in *ReqUpdateClient, opts ...grpc.CallOption) (*ResUpdateClient, error)
 	DeleteClient(ctx context.Context, in *ReqDeleteClient, opts ...grpc.CallOption) (*ResDeleteClient, error)
+	GetClientData(ctx context.Context, in *ReqGetClientData, opts ...grpc.CallOption) (*ResGetClientData, error)
 	GenerateToken(ctx context.Context, in *ReqGenerateToken, opts ...grpc.CallOption) (*ResGenerateToken, error)
 	RefreshToken(ctx context.Context, in *ReqRefreshToken, opts ...grpc.CallOption) (*ResRefreshToken, error)
 	InvalidateAllTokens(ctx context.Context, in *ReqInvalidateAllTokens, opts ...grpc.CallOption) (*ResInvalidateAllTokens, error)
@@ -1140,6 +1315,15 @@ func (c *authServiceClient) DeleteClient(ctx context.Context, in *ReqDeleteClien
 	return out, nil
 }
 
+func (c *authServiceClient) GetClientData(ctx context.Context, in *ReqGetClientData, opts ...grpc.CallOption) (*ResGetClientData, error) {
+	out := new(ResGetClientData)
+	err := c.cc.Invoke(ctx, "/services.AuthService/GetClientData", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *authServiceClient) GenerateToken(ctx context.Context, in *ReqGenerateToken, opts ...grpc.CallOption) (*ResGenerateToken, error) {
 	out := new(ResGenerateToken)
 	err := c.cc.Invoke(ctx, "/services.AuthService/GenerateToken", in, out, opts...)
@@ -1172,6 +1356,7 @@ type AuthServiceServer interface {
 	CreateClient(context.Context, *ReqCreateClient) (*ResCreateClient, error)
 	UpdateClient(context.Context, *ReqUpdateClient) (*ResUpdateClient, error)
 	DeleteClient(context.Context, *ReqDeleteClient) (*ResDeleteClient, error)
+	GetClientData(context.Context, *ReqGetClientData) (*ResGetClientData, error)
 	GenerateToken(context.Context, *ReqGenerateToken) (*ResGenerateToken, error)
 	RefreshToken(context.Context, *ReqRefreshToken) (*ResRefreshToken, error)
 	InvalidateAllTokens(context.Context, *ReqInvalidateAllTokens) (*ResInvalidateAllTokens, error)
@@ -1189,6 +1374,9 @@ func (*UnimplementedAuthServiceServer) UpdateClient(context.Context, *ReqUpdateC
 }
 func (*UnimplementedAuthServiceServer) DeleteClient(context.Context, *ReqDeleteClient) (*ResDeleteClient, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DeleteClient not implemented")
+}
+func (*UnimplementedAuthServiceServer) GetClientData(context.Context, *ReqGetClientData) (*ResGetClientData, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetClientData not implemented")
 }
 func (*UnimplementedAuthServiceServer) GenerateToken(context.Context, *ReqGenerateToken) (*ResGenerateToken, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GenerateToken not implemented")
@@ -1254,6 +1442,24 @@ func _AuthService_DeleteClient_Handler(srv interface{}, ctx context.Context, dec
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(AuthServiceServer).DeleteClient(ctx, req.(*ReqDeleteClient))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _AuthService_GetClientData_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ReqGetClientData)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AuthServiceServer).GetClientData(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/services.AuthService/GetClientData",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AuthServiceServer).GetClientData(ctx, req.(*ReqGetClientData))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -1327,6 +1533,10 @@ var _AuthService_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "DeleteClient",
 			Handler:    _AuthService_DeleteClient_Handler,
+		},
+		{
+			MethodName: "GetClientData",
+			Handler:    _AuthService_GetClientData_Handler,
 		},
 		{
 			MethodName: "GenerateToken",
