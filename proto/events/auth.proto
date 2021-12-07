@@ -22,6 +22,6 @@ message Cluster {
 message Resource {
   string name = 1; // @gotags: validate:"ascii"
   string namespace = 2; // @gotags: validate:"ascii"
-  enums.ResourceType kind = 3;
+  enums.ResourceType kind = 3; // @gotags: validate:"required"
   string cluster_id = 4; // @gotags: validate:"omitempty,uuid_if_not_empty"
 }

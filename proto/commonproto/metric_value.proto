@@ -22,4 +22,5 @@ message RawMetricValue {
 message Item {
   google.protobuf.Timestamp timestamp = 1;
   double value = 2; // faker:"long"
+  string metric_name = 3; // faker:"word"
 }

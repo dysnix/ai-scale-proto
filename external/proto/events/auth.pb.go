@@ -165,9 +165,9 @@ type Resource struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Name      string             `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty" validate:"ascii"`           // @gotags: validate:"ascii"
-	Namespace string             `protobuf:"bytes,2,opt,name=namespace,proto3" json:"namespace,omitempty" validate:"ascii"` // @gotags: validate:"ascii"
-	Kind      enums.ResourceType `protobuf:"varint,3,opt,name=kind,proto3,enum=enums.ResourceType" json:"kind,omitempty"`
+	Name      string             `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty" validate:"ascii"`                                                  // @gotags: validate:"ascii"
+	Namespace string             `protobuf:"bytes,2,opt,name=namespace,proto3" json:"namespace,omitempty" validate:"ascii"`                                        // @gotags: validate:"ascii"
+	Kind      enums.ResourceType `protobuf:"varint,3,opt,name=kind,proto3,enum=enums.ResourceType" json:"kind,omitempty" validate:"required"`                      // @gotags: validate:"required"
 	ClusterId string             `protobuf:"bytes,4,opt,name=cluster_id,json=clusterId,proto3" json:"cluster_id,omitempty" validate:"omitempty,uuid_if_not_empty"` // @gotags: validate:"omitempty,uuid_if_not_empty"
 }
 
