@@ -138,14 +138,12 @@ message ResGetCluster {
 
 message ReqAddResource {
   events.Resource resource = 1;
-  string cluster_id = 2;
 }
 
 message ResAddResource {}
 
 message ReqUpdateResource {
   events.Resource resource = 1;
-  string cluster_id = 2;
 }
 
 message ResUpdateResource {}
