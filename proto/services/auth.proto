@@ -150,12 +150,14 @@ message ResUpdateResource {}
 
 message ReqDeleteResource {
   message ResourceData {
-    string name = 1;
-    string cluster_id = 2;
-    string namespace = 3;
+    string name = 1; // @gotags: validate:"required,ascii"
+    string cluster_id = 2; // @gotags: validate:"required,ascii"
+    string namespace = 3; // @gotags: validate:"required,ascii"
   }
 
-  enums.DeleteType delete_type = 4;
+  ResourceData target_ref = 4; // @gotags: validate:"required"
+
+  enums.DeleteType delete_type = 5; // @gotags: validate:"required"
 }
 
 message ResDeleteResource {}
