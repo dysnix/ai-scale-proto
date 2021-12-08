@@ -868,6 +868,920 @@ func (x *ResGetClientData) GetClient() *events.Client {
 	return nil
 }
 
+type ReqAddCluster struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Cluster    *events.Cluster `protobuf:"bytes,1,opt,name=cluster,proto3" json:"cluster,omitempty"`
+	ClientName string          `protobuf:"bytes,2,opt,name=client_name,json=clientName,proto3" json:"client_name,omitempty"`
+}
+
+func (x *ReqAddCluster) Reset() {
+	*x = ReqAddCluster{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_proto_services_auth_proto_msgTypes[14]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ReqAddCluster) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ReqAddCluster) ProtoMessage() {}
+
+func (x *ReqAddCluster) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_services_auth_proto_msgTypes[14]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ReqAddCluster.ProtoReflect.Descriptor instead.
+func (*ReqAddCluster) Descriptor() ([]byte, []int) {
+	return file_proto_services_auth_proto_rawDescGZIP(), []int{14}
+}
+
+func (x *ReqAddCluster) GetCluster() *events.Cluster {
+	if x != nil {
+		return x.Cluster
+	}
+	return nil
+}
+
+func (x *ReqAddCluster) GetClientName() string {
+	if x != nil {
+		return x.ClientName
+	}
+	return ""
+}
+
+type ResAddCluster struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+}
+
+func (x *ResAddCluster) Reset() {
+	*x = ResAddCluster{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_proto_services_auth_proto_msgTypes[15]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ResAddCluster) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ResAddCluster) ProtoMessage() {}
+
+func (x *ResAddCluster) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_services_auth_proto_msgTypes[15]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ResAddCluster.ProtoReflect.Descriptor instead.
+func (*ResAddCluster) Descriptor() ([]byte, []int) {
+	return file_proto_services_auth_proto_rawDescGZIP(), []int{15}
+}
+
+type ReqUpdateCluster struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Cluster    *events.Cluster `protobuf:"bytes,1,opt,name=cluster,proto3" json:"cluster,omitempty"`
+	ClientName string          `protobuf:"bytes,2,opt,name=client_name,json=clientName,proto3" json:"client_name,omitempty"`
+}
+
+func (x *ReqUpdateCluster) Reset() {
+	*x = ReqUpdateCluster{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_proto_services_auth_proto_msgTypes[16]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ReqUpdateCluster) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ReqUpdateCluster) ProtoMessage() {}
+
+func (x *ReqUpdateCluster) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_services_auth_proto_msgTypes[16]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ReqUpdateCluster.ProtoReflect.Descriptor instead.
+func (*ReqUpdateCluster) Descriptor() ([]byte, []int) {
+	return file_proto_services_auth_proto_rawDescGZIP(), []int{16}
+}
+
+func (x *ReqUpdateCluster) GetCluster() *events.Cluster {
+	if x != nil {
+		return x.Cluster
+	}
+	return nil
+}
+
+func (x *ReqUpdateCluster) GetClientName() string {
+	if x != nil {
+		return x.ClientName
+	}
+	return ""
+}
+
+type ResUpdateCluster struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+}
+
+func (x *ResUpdateCluster) Reset() {
+	*x = ResUpdateCluster{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_proto_services_auth_proto_msgTypes[17]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ResUpdateCluster) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ResUpdateCluster) ProtoMessage() {}
+
+func (x *ResUpdateCluster) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_services_auth_proto_msgTypes[17]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ResUpdateCluster.ProtoReflect.Descriptor instead.
+func (*ResUpdateCluster) Descriptor() ([]byte, []int) {
+	return file_proto_services_auth_proto_rawDescGZIP(), []int{17}
+}
+
+type ReqDeleteCluster struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	// Types that are assignable to ClusterData:
+	//	*ReqDeleteCluster_Name
+	//	*ReqDeleteCluster_ClusterId
+	ClusterData isReqDeleteCluster_ClusterData `protobuf_oneof:"ClusterData"`
+	DeleteType  enums.DeleteType               `protobuf:"varint,3,opt,name=delete_type,json=deleteType,proto3,enum=enums.DeleteType" json:"delete_type,omitempty"`
+}
+
+func (x *ReqDeleteCluster) Reset() {
+	*x = ReqDeleteCluster{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_proto_services_auth_proto_msgTypes[18]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ReqDeleteCluster) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ReqDeleteCluster) ProtoMessage() {}
+
+func (x *ReqDeleteCluster) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_services_auth_proto_msgTypes[18]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ReqDeleteCluster.ProtoReflect.Descriptor instead.
+func (*ReqDeleteCluster) Descriptor() ([]byte, []int) {
+	return file_proto_services_auth_proto_rawDescGZIP(), []int{18}
+}
+
+func (m *ReqDeleteCluster) GetClusterData() isReqDeleteCluster_ClusterData {
+	if m != nil {
+		return m.ClusterData
+	}
+	return nil
+}
+
+func (x *ReqDeleteCluster) GetName() string {
+	if x, ok := x.GetClusterData().(*ReqDeleteCluster_Name); ok {
+		return x.Name
+	}
+	return ""
+}
+
+func (x *ReqDeleteCluster) GetClusterId() string {
+	if x, ok := x.GetClusterData().(*ReqDeleteCluster_ClusterId); ok {
+		return x.ClusterId
+	}
+	return ""
+}
+
+func (x *ReqDeleteCluster) GetDeleteType() enums.DeleteType {
+	if x != nil {
+		return x.DeleteType
+	}
+	return enums.DeleteType_Soft
+}
+
+type isReqDeleteCluster_ClusterData interface {
+	isReqDeleteCluster_ClusterData()
+}
+
+type ReqDeleteCluster_Name struct {
+	Name string `protobuf:"bytes,1,opt,name=name,proto3,oneof"`
+}
+
+type ReqDeleteCluster_ClusterId struct {
+	ClusterId string `protobuf:"bytes,2,opt,name=cluster_id,json=clusterId,proto3,oneof"`
+}
+
+func (*ReqDeleteCluster_Name) isReqDeleteCluster_ClusterData() {}
+
+func (*ReqDeleteCluster_ClusterId) isReqDeleteCluster_ClusterData() {}
+
+type ResDeleteCluster struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+}
+
+func (x *ResDeleteCluster) Reset() {
+	*x = ResDeleteCluster{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_proto_services_auth_proto_msgTypes[19]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ResDeleteCluster) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ResDeleteCluster) ProtoMessage() {}
+
+func (x *ResDeleteCluster) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_services_auth_proto_msgTypes[19]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ResDeleteCluster.ProtoReflect.Descriptor instead.
+func (*ResDeleteCluster) Descriptor() ([]byte, []int) {
+	return file_proto_services_auth_proto_rawDescGZIP(), []int{19}
+}
+
+type ReqGetCluster struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	// Types that are assignable to ClusterData:
+	//	*ReqGetCluster_Name
+	//	*ReqGetCluster_ClusterId
+	ClusterData isReqGetCluster_ClusterData `protobuf_oneof:"ClusterData"`
+}
+
+func (x *ReqGetCluster) Reset() {
+	*x = ReqGetCluster{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_proto_services_auth_proto_msgTypes[20]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ReqGetCluster) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ReqGetCluster) ProtoMessage() {}
+
+func (x *ReqGetCluster) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_services_auth_proto_msgTypes[20]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ReqGetCluster.ProtoReflect.Descriptor instead.
+func (*ReqGetCluster) Descriptor() ([]byte, []int) {
+	return file_proto_services_auth_proto_rawDescGZIP(), []int{20}
+}
+
+func (m *ReqGetCluster) GetClusterData() isReqGetCluster_ClusterData {
+	if m != nil {
+		return m.ClusterData
+	}
+	return nil
+}
+
+func (x *ReqGetCluster) GetName() string {
+	if x, ok := x.GetClusterData().(*ReqGetCluster_Name); ok {
+		return x.Name
+	}
+	return ""
+}
+
+func (x *ReqGetCluster) GetClusterId() string {
+	if x, ok := x.GetClusterData().(*ReqGetCluster_ClusterId); ok {
+		return x.ClusterId
+	}
+	return ""
+}
+
+type isReqGetCluster_ClusterData interface {
+	isReqGetCluster_ClusterData()
+}
+
+type ReqGetCluster_Name struct {
+	Name string `protobuf:"bytes,1,opt,name=name,proto3,oneof"`
+}
+
+type ReqGetCluster_ClusterId struct {
+	ClusterId string `protobuf:"bytes,2,opt,name=cluster_id,json=clusterId,proto3,oneof"`
+}
+
+func (*ReqGetCluster_Name) isReqGetCluster_ClusterData() {}
+
+func (*ReqGetCluster_ClusterId) isReqGetCluster_ClusterData() {}
+
+type ResGetCluster struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Cluster *events.Cluster `protobuf:"bytes,1,opt,name=cluster,proto3" json:"cluster,omitempty"`
+}
+
+func (x *ResGetCluster) Reset() {
+	*x = ResGetCluster{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_proto_services_auth_proto_msgTypes[21]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ResGetCluster) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ResGetCluster) ProtoMessage() {}
+
+func (x *ResGetCluster) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_services_auth_proto_msgTypes[21]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ResGetCluster.ProtoReflect.Descriptor instead.
+func (*ResGetCluster) Descriptor() ([]byte, []int) {
+	return file_proto_services_auth_proto_rawDescGZIP(), []int{21}
+}
+
+func (x *ResGetCluster) GetCluster() *events.Cluster {
+	if x != nil {
+		return x.Cluster
+	}
+	return nil
+}
+
+type ReqAddResource struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Resource  *events.Resource `protobuf:"bytes,1,opt,name=resource,proto3" json:"resource,omitempty"`
+	ClusterId string           `protobuf:"bytes,2,opt,name=cluster_id,json=clusterId,proto3" json:"cluster_id,omitempty"`
+}
+
+func (x *ReqAddResource) Reset() {
+	*x = ReqAddResource{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_proto_services_auth_proto_msgTypes[22]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ReqAddResource) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ReqAddResource) ProtoMessage() {}
+
+func (x *ReqAddResource) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_services_auth_proto_msgTypes[22]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ReqAddResource.ProtoReflect.Descriptor instead.
+func (*ReqAddResource) Descriptor() ([]byte, []int) {
+	return file_proto_services_auth_proto_rawDescGZIP(), []int{22}
+}
+
+func (x *ReqAddResource) GetResource() *events.Resource {
+	if x != nil {
+		return x.Resource
+	}
+	return nil
+}
+
+func (x *ReqAddResource) GetClusterId() string {
+	if x != nil {
+		return x.ClusterId
+	}
+	return ""
+}
+
+type ResAddResource struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+}
+
+func (x *ResAddResource) Reset() {
+	*x = ResAddResource{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_proto_services_auth_proto_msgTypes[23]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ResAddResource) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ResAddResource) ProtoMessage() {}
+
+func (x *ResAddResource) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_services_auth_proto_msgTypes[23]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ResAddResource.ProtoReflect.Descriptor instead.
+func (*ResAddResource) Descriptor() ([]byte, []int) {
+	return file_proto_services_auth_proto_rawDescGZIP(), []int{23}
+}
+
+type ReqUpdateResource struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Resource  *events.Resource `protobuf:"bytes,1,opt,name=resource,proto3" json:"resource,omitempty"`
+	ClusterId string           `protobuf:"bytes,2,opt,name=cluster_id,json=clusterId,proto3" json:"cluster_id,omitempty"`
+}
+
+func (x *ReqUpdateResource) Reset() {
+	*x = ReqUpdateResource{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_proto_services_auth_proto_msgTypes[24]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ReqUpdateResource) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ReqUpdateResource) ProtoMessage() {}
+
+func (x *ReqUpdateResource) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_services_auth_proto_msgTypes[24]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ReqUpdateResource.ProtoReflect.Descriptor instead.
+func (*ReqUpdateResource) Descriptor() ([]byte, []int) {
+	return file_proto_services_auth_proto_rawDescGZIP(), []int{24}
+}
+
+func (x *ReqUpdateResource) GetResource() *events.Resource {
+	if x != nil {
+		return x.Resource
+	}
+	return nil
+}
+
+func (x *ReqUpdateResource) GetClusterId() string {
+	if x != nil {
+		return x.ClusterId
+	}
+	return ""
+}
+
+type ResUpdateResource struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+}
+
+func (x *ResUpdateResource) Reset() {
+	*x = ResUpdateResource{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_proto_services_auth_proto_msgTypes[25]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ResUpdateResource) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ResUpdateResource) ProtoMessage() {}
+
+func (x *ResUpdateResource) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_services_auth_proto_msgTypes[25]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ResUpdateResource.ProtoReflect.Descriptor instead.
+func (*ResUpdateResource) Descriptor() ([]byte, []int) {
+	return file_proto_services_auth_proto_rawDescGZIP(), []int{25}
+}
+
+type ReqDeleteResource struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	DeleteType enums.DeleteType `protobuf:"varint,4,opt,name=delete_type,json=deleteType,proto3,enum=enums.DeleteType" json:"delete_type,omitempty"`
+}
+
+func (x *ReqDeleteResource) Reset() {
+	*x = ReqDeleteResource{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_proto_services_auth_proto_msgTypes[26]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ReqDeleteResource) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ReqDeleteResource) ProtoMessage() {}
+
+func (x *ReqDeleteResource) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_services_auth_proto_msgTypes[26]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ReqDeleteResource.ProtoReflect.Descriptor instead.
+func (*ReqDeleteResource) Descriptor() ([]byte, []int) {
+	return file_proto_services_auth_proto_rawDescGZIP(), []int{26}
+}
+
+func (x *ReqDeleteResource) GetDeleteType() enums.DeleteType {
+	if x != nil {
+		return x.DeleteType
+	}
+	return enums.DeleteType_Soft
+}
+
+type ResDeleteResource struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+}
+
+func (x *ResDeleteResource) Reset() {
+	*x = ResDeleteResource{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_proto_services_auth_proto_msgTypes[27]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ResDeleteResource) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ResDeleteResource) ProtoMessage() {}
+
+func (x *ResDeleteResource) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_services_auth_proto_msgTypes[27]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ResDeleteResource.ProtoReflect.Descriptor instead.
+func (*ResDeleteResource) Descriptor() ([]byte, []int) {
+	return file_proto_services_auth_proto_rawDescGZIP(), []int{27}
+}
+
+type ReqGetResources struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	// Types that are assignable to ResourceData:
+	//	*ReqGetResources_Name
+	//	*ReqGetResources_ClusterId
+	//	*ReqGetResources_Namespace
+	ResourceData isReqGetResources_ResourceData `protobuf_oneof:"ResourceData"`
+}
+
+func (x *ReqGetResources) Reset() {
+	*x = ReqGetResources{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_proto_services_auth_proto_msgTypes[28]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ReqGetResources) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ReqGetResources) ProtoMessage() {}
+
+func (x *ReqGetResources) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_services_auth_proto_msgTypes[28]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ReqGetResources.ProtoReflect.Descriptor instead.
+func (*ReqGetResources) Descriptor() ([]byte, []int) {
+	return file_proto_services_auth_proto_rawDescGZIP(), []int{28}
+}
+
+func (m *ReqGetResources) GetResourceData() isReqGetResources_ResourceData {
+	if m != nil {
+		return m.ResourceData
+	}
+	return nil
+}
+
+func (x *ReqGetResources) GetName() string {
+	if x, ok := x.GetResourceData().(*ReqGetResources_Name); ok {
+		return x.Name
+	}
+	return ""
+}
+
+func (x *ReqGetResources) GetClusterId() string {
+	if x, ok := x.GetResourceData().(*ReqGetResources_ClusterId); ok {
+		return x.ClusterId
+	}
+	return ""
+}
+
+func (x *ReqGetResources) GetNamespace() string {
+	if x, ok := x.GetResourceData().(*ReqGetResources_Namespace); ok {
+		return x.Namespace
+	}
+	return ""
+}
+
+type isReqGetResources_ResourceData interface {
+	isReqGetResources_ResourceData()
+}
+
+type ReqGetResources_Name struct {
+	Name string `protobuf:"bytes,1,opt,name=name,proto3,oneof"`
+}
+
+type ReqGetResources_ClusterId struct {
+	ClusterId string `protobuf:"bytes,2,opt,name=cluster_id,json=clusterId,proto3,oneof"`
+}
+
+type ReqGetResources_Namespace struct {
+	Namespace string `protobuf:"bytes,3,opt,name=namespace,proto3,oneof"`
+}
+
+func (*ReqGetResources_Name) isReqGetResources_ResourceData() {}
+
+func (*ReqGetResources_ClusterId) isReqGetResources_ResourceData() {}
+
+func (*ReqGetResources_Namespace) isReqGetResources_ResourceData() {}
+
+type ResGetResources struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Resources []*events.Resource `protobuf:"bytes,1,rep,name=resources,proto3" json:"resources,omitempty"`
+}
+
+func (x *ResGetResources) Reset() {
+	*x = ResGetResources{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_proto_services_auth_proto_msgTypes[29]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ResGetResources) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ResGetResources) ProtoMessage() {}
+
+func (x *ResGetResources) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_services_auth_proto_msgTypes[29]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ResGetResources.ProtoReflect.Descriptor instead.
+func (*ResGetResources) Descriptor() ([]byte, []int) {
+	return file_proto_services_auth_proto_rawDescGZIP(), []int{29}
+}
+
+func (x *ResGetResources) GetResources() []*events.Resource {
+	if x != nil {
+		return x.Resources
+	}
+	return nil
+}
+
+type ReqDeleteResource_ResourceData struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Name      string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
+	ClusterId string `protobuf:"bytes,2,opt,name=cluster_id,json=clusterId,proto3" json:"cluster_id,omitempty"`
+	Namespace string `protobuf:"bytes,3,opt,name=namespace,proto3" json:"namespace,omitempty"`
+}
+
+func (x *ReqDeleteResource_ResourceData) Reset() {
+	*x = ReqDeleteResource_ResourceData{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_proto_services_auth_proto_msgTypes[30]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *ReqDeleteResource_ResourceData) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*ReqDeleteResource_ResourceData) ProtoMessage() {}
+
+func (x *ReqDeleteResource_ResourceData) ProtoReflect() protoreflect.Message {
+	mi := &file_proto_services_auth_proto_msgTypes[30]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use ReqDeleteResource_ResourceData.ProtoReflect.Descriptor instead.
+func (*ReqDeleteResource_ResourceData) Descriptor() ([]byte, []int) {
+	return file_proto_services_auth_proto_rawDescGZIP(), []int{26, 0}
+}
+
+func (x *ReqDeleteResource_ResourceData) GetName() string {
+	if x != nil {
+		return x.Name
+	}
+	return ""
+}
+
+func (x *ReqDeleteResource_ResourceData) GetClusterId() string {
+	if x != nil {
+		return x.ClusterId
+	}
+	return ""
+}
+
+func (x *ReqDeleteResource_ResourceData) GetNamespace() string {
+	if x != nil {
+		return x.Namespace
+	}
+	return ""
+}
+
 var File_proto_services_auth_proto protoreflect.FileDescriptor
 
 var file_proto_services_auth_proto_rawDesc = []byte{
@@ -943,26 +1857,134 @@ var file_proto_services_auth_proto_rawDesc = []byte{
 	0x65, 0x73, 0x47, 0x65, 0x74, 0x43, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x44, 0x61, 0x74, 0x61, 0x12,
 	0x26, 0x0a, 0x06, 0x63, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32,
 	0x0e, 0x2e, 0x65, 0x76, 0x65, 0x6e, 0x74, 0x73, 0x2e, 0x43, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x52,
-	0x06, 0x63, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x32, 0xa0, 0x04, 0x0a, 0x0b, 0x41, 0x75, 0x74, 0x68,
-	0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x46, 0x0a, 0x0c, 0x43, 0x72, 0x65, 0x61, 0x74,
-	0x65, 0x43, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x12, 0x19, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63,
-	0x65, 0x73, 0x2e, 0x52, 0x65, 0x71, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x43, 0x6c, 0x69, 0x65,
-	0x6e, 0x74, 0x1a, 0x19, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x52, 0x65,
-	0x73, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x43, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x22, 0x00, 0x12,
-	0x46, 0x0a, 0x0c, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x43, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x12,
-	0x19, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x52, 0x65, 0x71, 0x55, 0x70,
-	0x64, 0x61, 0x74, 0x65, 0x43, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x1a, 0x19, 0x2e, 0x73, 0x65, 0x72,
-	0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x52, 0x65, 0x73, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x43,
-	0x6c, 0x69, 0x65, 0x6e, 0x74, 0x22, 0x00, 0x12, 0x46, 0x0a, 0x0c, 0x44, 0x65, 0x6c, 0x65, 0x74,
-	0x65, 0x43, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x12, 0x19, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63,
-	0x65, 0x73, 0x2e, 0x52, 0x65, 0x71, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x43, 0x6c, 0x69, 0x65,
-	0x6e, 0x74, 0x1a, 0x19, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x52, 0x65,
-	0x73, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x43, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x22, 0x00, 0x12,
-	0x49, 0x0a, 0x0d, 0x47, 0x65, 0x74, 0x43, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x44, 0x61, 0x74, 0x61,
-	0x12, 0x1a, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x52, 0x65, 0x71, 0x47,
-	0x65, 0x74, 0x43, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x44, 0x61, 0x74, 0x61, 0x1a, 0x1a, 0x2e, 0x73,
-	0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x52, 0x65, 0x73, 0x47, 0x65, 0x74, 0x43, 0x6c,
-	0x69, 0x65, 0x6e, 0x74, 0x44, 0x61, 0x74, 0x61, 0x22, 0x00, 0x12, 0x49, 0x0a, 0x0d, 0x47, 0x65,
+	0x06, 0x63, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x22, 0x5b, 0x0a, 0x0d, 0x52, 0x65, 0x71, 0x41, 0x64,
+	0x64, 0x43, 0x6c, 0x75, 0x73, 0x74, 0x65, 0x72, 0x12, 0x29, 0x0a, 0x07, 0x63, 0x6c, 0x75, 0x73,
+	0x74, 0x65, 0x72, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x0f, 0x2e, 0x65, 0x76, 0x65, 0x6e,
+	0x74, 0x73, 0x2e, 0x43, 0x6c, 0x75, 0x73, 0x74, 0x65, 0x72, 0x52, 0x07, 0x63, 0x6c, 0x75, 0x73,
+	0x74, 0x65, 0x72, 0x12, 0x1f, 0x0a, 0x0b, 0x63, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x5f, 0x6e, 0x61,
+	0x6d, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0a, 0x63, 0x6c, 0x69, 0x65, 0x6e, 0x74,
+	0x4e, 0x61, 0x6d, 0x65, 0x22, 0x0f, 0x0a, 0x0d, 0x52, 0x65, 0x73, 0x41, 0x64, 0x64, 0x43, 0x6c,
+	0x75, 0x73, 0x74, 0x65, 0x72, 0x22, 0x5e, 0x0a, 0x10, 0x52, 0x65, 0x71, 0x55, 0x70, 0x64, 0x61,
+	0x74, 0x65, 0x43, 0x6c, 0x75, 0x73, 0x74, 0x65, 0x72, 0x12, 0x29, 0x0a, 0x07, 0x63, 0x6c, 0x75,
+	0x73, 0x74, 0x65, 0x72, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x0f, 0x2e, 0x65, 0x76, 0x65,
+	0x6e, 0x74, 0x73, 0x2e, 0x43, 0x6c, 0x75, 0x73, 0x74, 0x65, 0x72, 0x52, 0x07, 0x63, 0x6c, 0x75,
+	0x73, 0x74, 0x65, 0x72, 0x12, 0x1f, 0x0a, 0x0b, 0x63, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x5f, 0x6e,
+	0x61, 0x6d, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0a, 0x63, 0x6c, 0x69, 0x65, 0x6e,
+	0x74, 0x4e, 0x61, 0x6d, 0x65, 0x22, 0x12, 0x0a, 0x10, 0x52, 0x65, 0x73, 0x55, 0x70, 0x64, 0x61,
+	0x74, 0x65, 0x43, 0x6c, 0x75, 0x73, 0x74, 0x65, 0x72, 0x22, 0x8c, 0x01, 0x0a, 0x10, 0x52, 0x65,
+	0x71, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x43, 0x6c, 0x75, 0x73, 0x74, 0x65, 0x72, 0x12, 0x14,
+	0x0a, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x48, 0x00, 0x52, 0x04,
+	0x6e, 0x61, 0x6d, 0x65, 0x12, 0x1f, 0x0a, 0x0a, 0x63, 0x6c, 0x75, 0x73, 0x74, 0x65, 0x72, 0x5f,
+	0x69, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x48, 0x00, 0x52, 0x09, 0x63, 0x6c, 0x75, 0x73,
+	0x74, 0x65, 0x72, 0x49, 0x64, 0x12, 0x32, 0x0a, 0x0b, 0x64, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x5f,
+	0x74, 0x79, 0x70, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x0e, 0x32, 0x11, 0x2e, 0x65, 0x6e, 0x75,
+	0x6d, 0x73, 0x2e, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x54, 0x79, 0x70, 0x65, 0x52, 0x0a, 0x64,
+	0x65, 0x6c, 0x65, 0x74, 0x65, 0x54, 0x79, 0x70, 0x65, 0x42, 0x0d, 0x0a, 0x0b, 0x43, 0x6c, 0x75,
+	0x73, 0x74, 0x65, 0x72, 0x44, 0x61, 0x74, 0x61, 0x22, 0x12, 0x0a, 0x10, 0x52, 0x65, 0x73, 0x44,
+	0x65, 0x6c, 0x65, 0x74, 0x65, 0x43, 0x6c, 0x75, 0x73, 0x74, 0x65, 0x72, 0x22, 0x55, 0x0a, 0x0d,
+	0x52, 0x65, 0x71, 0x47, 0x65, 0x74, 0x43, 0x6c, 0x75, 0x73, 0x74, 0x65, 0x72, 0x12, 0x14, 0x0a,
+	0x04, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x48, 0x00, 0x52, 0x04, 0x6e,
+	0x61, 0x6d, 0x65, 0x12, 0x1f, 0x0a, 0x0a, 0x63, 0x6c, 0x75, 0x73, 0x74, 0x65, 0x72, 0x5f, 0x69,
+	0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x48, 0x00, 0x52, 0x09, 0x63, 0x6c, 0x75, 0x73, 0x74,
+	0x65, 0x72, 0x49, 0x64, 0x42, 0x0d, 0x0a, 0x0b, 0x43, 0x6c, 0x75, 0x73, 0x74, 0x65, 0x72, 0x44,
+	0x61, 0x74, 0x61, 0x22, 0x3a, 0x0a, 0x0d, 0x52, 0x65, 0x73, 0x47, 0x65, 0x74, 0x43, 0x6c, 0x75,
+	0x73, 0x74, 0x65, 0x72, 0x12, 0x29, 0x0a, 0x07, 0x63, 0x6c, 0x75, 0x73, 0x74, 0x65, 0x72, 0x18,
+	0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x0f, 0x2e, 0x65, 0x76, 0x65, 0x6e, 0x74, 0x73, 0x2e, 0x43,
+	0x6c, 0x75, 0x73, 0x74, 0x65, 0x72, 0x52, 0x07, 0x63, 0x6c, 0x75, 0x73, 0x74, 0x65, 0x72, 0x22,
+	0x5d, 0x0a, 0x0e, 0x52, 0x65, 0x71, 0x41, 0x64, 0x64, 0x52, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63,
+	0x65, 0x12, 0x2c, 0x0a, 0x08, 0x72, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x18, 0x01, 0x20,
+	0x01, 0x28, 0x0b, 0x32, 0x10, 0x2e, 0x65, 0x76, 0x65, 0x6e, 0x74, 0x73, 0x2e, 0x52, 0x65, 0x73,
+	0x6f, 0x75, 0x72, 0x63, 0x65, 0x52, 0x08, 0x72, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x12,
+	0x1d, 0x0a, 0x0a, 0x63, 0x6c, 0x75, 0x73, 0x74, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x02, 0x20,
+	0x01, 0x28, 0x09, 0x52, 0x09, 0x63, 0x6c, 0x75, 0x73, 0x74, 0x65, 0x72, 0x49, 0x64, 0x22, 0x10,
+	0x0a, 0x0e, 0x52, 0x65, 0x73, 0x41, 0x64, 0x64, 0x52, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65,
+	0x22, 0x60, 0x0a, 0x11, 0x52, 0x65, 0x71, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x52, 0x65, 0x73,
+	0x6f, 0x75, 0x72, 0x63, 0x65, 0x12, 0x2c, 0x0a, 0x08, 0x72, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63,
+	0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x10, 0x2e, 0x65, 0x76, 0x65, 0x6e, 0x74, 0x73,
+	0x2e, 0x52, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x52, 0x08, 0x72, 0x65, 0x73, 0x6f, 0x75,
+	0x72, 0x63, 0x65, 0x12, 0x1d, 0x0a, 0x0a, 0x63, 0x6c, 0x75, 0x73, 0x74, 0x65, 0x72, 0x5f, 0x69,
+	0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x63, 0x6c, 0x75, 0x73, 0x74, 0x65, 0x72,
+	0x49, 0x64, 0x22, 0x13, 0x0a, 0x11, 0x52, 0x65, 0x73, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x52,
+	0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x22, 0xa8, 0x01, 0x0a, 0x11, 0x52, 0x65, 0x71, 0x44,
+	0x65, 0x6c, 0x65, 0x74, 0x65, 0x52, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x12, 0x32, 0x0a,
+	0x0b, 0x64, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x18, 0x04, 0x20, 0x01,
+	0x28, 0x0e, 0x32, 0x11, 0x2e, 0x65, 0x6e, 0x75, 0x6d, 0x73, 0x2e, 0x44, 0x65, 0x6c, 0x65, 0x74,
+	0x65, 0x54, 0x79, 0x70, 0x65, 0x52, 0x0a, 0x64, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x54, 0x79, 0x70,
+	0x65, 0x1a, 0x5f, 0x0a, 0x0c, 0x52, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x44, 0x61, 0x74,
+	0x61, 0x12, 0x12, 0x0a, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52,
+	0x04, 0x6e, 0x61, 0x6d, 0x65, 0x12, 0x1d, 0x0a, 0x0a, 0x63, 0x6c, 0x75, 0x73, 0x74, 0x65, 0x72,
+	0x5f, 0x69, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x63, 0x6c, 0x75, 0x73, 0x74,
+	0x65, 0x72, 0x49, 0x64, 0x12, 0x1c, 0x0a, 0x09, 0x6e, 0x61, 0x6d, 0x65, 0x73, 0x70, 0x61, 0x63,
+	0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x6e, 0x61, 0x6d, 0x65, 0x73, 0x70, 0x61,
+	0x63, 0x65, 0x22, 0x13, 0x0a, 0x11, 0x52, 0x65, 0x73, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x52,
+	0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x22, 0x78, 0x0a, 0x0f, 0x52, 0x65, 0x71, 0x47, 0x65,
+	0x74, 0x52, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x73, 0x12, 0x14, 0x0a, 0x04, 0x6e, 0x61,
+	0x6d, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x48, 0x00, 0x52, 0x04, 0x6e, 0x61, 0x6d, 0x65,
+	0x12, 0x1f, 0x0a, 0x0a, 0x63, 0x6c, 0x75, 0x73, 0x74, 0x65, 0x72, 0x5f, 0x69, 0x64, 0x18, 0x02,
+	0x20, 0x01, 0x28, 0x09, 0x48, 0x00, 0x52, 0x09, 0x63, 0x6c, 0x75, 0x73, 0x74, 0x65, 0x72, 0x49,
+	0x64, 0x12, 0x1e, 0x0a, 0x09, 0x6e, 0x61, 0x6d, 0x65, 0x73, 0x70, 0x61, 0x63, 0x65, 0x18, 0x03,
+	0x20, 0x01, 0x28, 0x09, 0x48, 0x00, 0x52, 0x09, 0x6e, 0x61, 0x6d, 0x65, 0x73, 0x70, 0x61, 0x63,
+	0x65, 0x42, 0x0e, 0x0a, 0x0c, 0x52, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x44, 0x61, 0x74,
+	0x61, 0x22, 0x41, 0x0a, 0x0f, 0x52, 0x65, 0x73, 0x47, 0x65, 0x74, 0x52, 0x65, 0x73, 0x6f, 0x75,
+	0x72, 0x63, 0x65, 0x73, 0x12, 0x2e, 0x0a, 0x09, 0x72, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65,
+	0x73, 0x18, 0x01, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x10, 0x2e, 0x65, 0x76, 0x65, 0x6e, 0x74, 0x73,
+	0x2e, 0x52, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x52, 0x09, 0x72, 0x65, 0x73, 0x6f, 0x75,
+	0x72, 0x63, 0x65, 0x73, 0x32, 0xe3, 0x08, 0x0a, 0x0b, 0x41, 0x75, 0x74, 0x68, 0x53, 0x65, 0x72,
+	0x76, 0x69, 0x63, 0x65, 0x12, 0x46, 0x0a, 0x0c, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x43, 0x6c,
+	0x69, 0x65, 0x6e, 0x74, 0x12, 0x19, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e,
+	0x52, 0x65, 0x71, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x43, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x1a,
+	0x19, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x52, 0x65, 0x73, 0x43, 0x72,
+	0x65, 0x61, 0x74, 0x65, 0x43, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x22, 0x00, 0x12, 0x46, 0x0a, 0x0c,
+	0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x43, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x12, 0x19, 0x2e, 0x73,
+	0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x52, 0x65, 0x71, 0x55, 0x70, 0x64, 0x61, 0x74,
+	0x65, 0x43, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x1a, 0x19, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63,
+	0x65, 0x73, 0x2e, 0x52, 0x65, 0x73, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x43, 0x6c, 0x69, 0x65,
+	0x6e, 0x74, 0x22, 0x00, 0x12, 0x46, 0x0a, 0x0c, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x43, 0x6c,
+	0x69, 0x65, 0x6e, 0x74, 0x12, 0x19, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e,
+	0x52, 0x65, 0x71, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x43, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x1a,
+	0x19, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x52, 0x65, 0x73, 0x44, 0x65,
+	0x6c, 0x65, 0x74, 0x65, 0x43, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x22, 0x00, 0x12, 0x49, 0x0a, 0x0d,
+	0x47, 0x65, 0x74, 0x43, 0x6c, 0x69, 0x65, 0x6e, 0x74, 0x44, 0x61, 0x74, 0x61, 0x12, 0x1a, 0x2e,
+	0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x52, 0x65, 0x71, 0x47, 0x65, 0x74, 0x43,
+	0x6c, 0x69, 0x65, 0x6e, 0x74, 0x44, 0x61, 0x74, 0x61, 0x1a, 0x1a, 0x2e, 0x73, 0x65, 0x72, 0x76,
+	0x69, 0x63, 0x65, 0x73, 0x2e, 0x52, 0x65, 0x73, 0x47, 0x65, 0x74, 0x43, 0x6c, 0x69, 0x65, 0x6e,
+	0x74, 0x44, 0x61, 0x74, 0x61, 0x22, 0x00, 0x12, 0x40, 0x0a, 0x0a, 0x41, 0x64, 0x64, 0x43, 0x6c,
+	0x75, 0x73, 0x74, 0x65, 0x72, 0x12, 0x17, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73,
+	0x2e, 0x52, 0x65, 0x71, 0x41, 0x64, 0x64, 0x43, 0x6c, 0x75, 0x73, 0x74, 0x65, 0x72, 0x1a, 0x17,
+	0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x52, 0x65, 0x73, 0x41, 0x64, 0x64,
+	0x43, 0x6c, 0x75, 0x73, 0x74, 0x65, 0x72, 0x22, 0x00, 0x12, 0x49, 0x0a, 0x0d, 0x55, 0x70, 0x64,
+	0x61, 0x74, 0x65, 0x43, 0x6c, 0x75, 0x73, 0x74, 0x65, 0x72, 0x12, 0x1a, 0x2e, 0x73, 0x65, 0x72,
+	0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x52, 0x65, 0x71, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x43,
+	0x6c, 0x75, 0x73, 0x74, 0x65, 0x72, 0x1a, 0x1a, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65,
+	0x73, 0x2e, 0x52, 0x65, 0x73, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x43, 0x6c, 0x75, 0x73, 0x74,
+	0x65, 0x72, 0x22, 0x00, 0x12, 0x49, 0x0a, 0x0d, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x43, 0x6c,
+	0x75, 0x73, 0x74, 0x65, 0x72, 0x12, 0x1a, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73,
+	0x2e, 0x52, 0x65, 0x71, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x43, 0x6c, 0x75, 0x73, 0x74, 0x65,
+	0x72, 0x1a, 0x1a, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x52, 0x65, 0x73,
+	0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x43, 0x6c, 0x75, 0x73, 0x74, 0x65, 0x72, 0x22, 0x00, 0x12,
+	0x40, 0x0a, 0x0a, 0x47, 0x65, 0x74, 0x43, 0x6c, 0x75, 0x73, 0x74, 0x65, 0x72, 0x12, 0x17, 0x2e,
+	0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x52, 0x65, 0x71, 0x47, 0x65, 0x74, 0x43,
+	0x6c, 0x75, 0x73, 0x74, 0x65, 0x72, 0x1a, 0x17, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65,
+	0x73, 0x2e, 0x52, 0x65, 0x73, 0x47, 0x65, 0x74, 0x43, 0x6c, 0x75, 0x73, 0x74, 0x65, 0x72, 0x22,
+	0x00, 0x12, 0x43, 0x0a, 0x0b, 0x41, 0x64, 0x64, 0x52, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65,
+	0x12, 0x18, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x52, 0x65, 0x71, 0x41,
+	0x64, 0x64, 0x52, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x1a, 0x18, 0x2e, 0x73, 0x65, 0x72,
+	0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x52, 0x65, 0x73, 0x41, 0x64, 0x64, 0x52, 0x65, 0x73, 0x6f,
+	0x75, 0x72, 0x63, 0x65, 0x22, 0x00, 0x12, 0x4c, 0x0a, 0x0e, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65,
+	0x52, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x12, 0x1b, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69,
+	0x63, 0x65, 0x73, 0x2e, 0x52, 0x65, 0x71, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x52, 0x65, 0x73,
+	0x6f, 0x75, 0x72, 0x63, 0x65, 0x1a, 0x1b, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73,
+	0x2e, 0x52, 0x65, 0x73, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x52, 0x65, 0x73, 0x6f, 0x75, 0x72,
+	0x63, 0x65, 0x22, 0x00, 0x12, 0x4c, 0x0a, 0x0e, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x52, 0x65,
+	0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x12, 0x1b, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65,
+	0x73, 0x2e, 0x52, 0x65, 0x71, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x52, 0x65, 0x73, 0x6f, 0x75,
+	0x72, 0x63, 0x65, 0x1a, 0x1b, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x52,
+	0x65, 0x73, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x52, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65,
+	0x22, 0x00, 0x12, 0x46, 0x0a, 0x0c, 0x47, 0x65, 0x74, 0x52, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63,
+	0x65, 0x73, 0x12, 0x19, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x52, 0x65,
+	0x71, 0x47, 0x65, 0x74, 0x52, 0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x73, 0x1a, 0x19, 0x2e,
+	0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x52, 0x65, 0x73, 0x47, 0x65, 0x74, 0x52,
+	0x65, 0x73, 0x6f, 0x75, 0x72, 0x63, 0x65, 0x73, 0x22, 0x00, 0x12, 0x49, 0x0a, 0x0d, 0x47, 0x65,
 	0x6e, 0x65, 0x72, 0x61, 0x74, 0x65, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x12, 0x1a, 0x2e, 0x73, 0x65,
 	0x72, 0x76, 0x69, 0x63, 0x65, 0x73, 0x2e, 0x52, 0x65, 0x71, 0x47, 0x65, 0x6e, 0x65, 0x72, 0x61,
 	0x74, 0x65, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x1a, 0x1a, 0x2e, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63,
@@ -996,52 +2018,95 @@ func file_proto_services_auth_proto_rawDescGZIP() []byte {
 	return file_proto_services_auth_proto_rawDescData
 }
 
-var file_proto_services_auth_proto_msgTypes = make([]protoimpl.MessageInfo, 14)
+var file_proto_services_auth_proto_msgTypes = make([]protoimpl.MessageInfo, 31)
 var file_proto_services_auth_proto_goTypes = []interface{}{
-	(*ReqCreateClient)(nil),        // 0: services.ReqCreateClient
-	(*ResCreateClient)(nil),        // 1: services.ResCreateClient
-	(*ReqInvalidateAllTokens)(nil), // 2: services.ReqInvalidateAllTokens
-	(*ResInvalidateAllTokens)(nil), // 3: services.ResInvalidateAllTokens
-	(*ReqUpdateClient)(nil),        // 4: services.ReqUpdateClient
-	(*ResUpdateClient)(nil),        // 5: services.ResUpdateClient
-	(*ReqDeleteClient)(nil),        // 6: services.ReqDeleteClient
-	(*ResDeleteClient)(nil),        // 7: services.ResDeleteClient
-	(*ReqGenerateToken)(nil),       // 8: services.ReqGenerateToken
-	(*ResGenerateToken)(nil),       // 9: services.ResGenerateToken
-	(*ReqRefreshToken)(nil),        // 10: services.ReqRefreshToken
-	(*ResRefreshToken)(nil),        // 11: services.ResRefreshToken
-	(*ReqGetClientData)(nil),       // 12: services.ReqGetClientData
-	(*ResGetClientData)(nil),       // 13: services.ResGetClientData
-	(*events.Client)(nil),          // 14: events.Client
-	(enums.DeleteType)(0),          // 15: enums.DeleteType
-	(*duration.Duration)(nil),      // 16: google.protobuf.Duration
+	(*ReqCreateClient)(nil),                // 0: services.ReqCreateClient
+	(*ResCreateClient)(nil),                // 1: services.ResCreateClient
+	(*ReqInvalidateAllTokens)(nil),         // 2: services.ReqInvalidateAllTokens
+	(*ResInvalidateAllTokens)(nil),         // 3: services.ResInvalidateAllTokens
+	(*ReqUpdateClient)(nil),                // 4: services.ReqUpdateClient
+	(*ResUpdateClient)(nil),                // 5: services.ResUpdateClient
+	(*ReqDeleteClient)(nil),                // 6: services.ReqDeleteClient
+	(*ResDeleteClient)(nil),                // 7: services.ResDeleteClient
+	(*ReqGenerateToken)(nil),               // 8: services.ReqGenerateToken
+	(*ResGenerateToken)(nil),               // 9: services.ResGenerateToken
+	(*ReqRefreshToken)(nil),                // 10: services.ReqRefreshToken
+	(*ResRefreshToken)(nil),                // 11: services.ResRefreshToken
+	(*ReqGetClientData)(nil),               // 12: services.ReqGetClientData
+	(*ResGetClientData)(nil),               // 13: services.ResGetClientData
+	(*ReqAddCluster)(nil),                  // 14: services.ReqAddCluster
+	(*ResAddCluster)(nil),                  // 15: services.ResAddCluster
+	(*ReqUpdateCluster)(nil),               // 16: services.ReqUpdateCluster
+	(*ResUpdateCluster)(nil),               // 17: services.ResUpdateCluster
+	(*ReqDeleteCluster)(nil),               // 18: services.ReqDeleteCluster
+	(*ResDeleteCluster)(nil),               // 19: services.ResDeleteCluster
+	(*ReqGetCluster)(nil),                  // 20: services.ReqGetCluster
+	(*ResGetCluster)(nil),                  // 21: services.ResGetCluster
+	(*ReqAddResource)(nil),                 // 22: services.ReqAddResource
+	(*ResAddResource)(nil),                 // 23: services.ResAddResource
+	(*ReqUpdateResource)(nil),              // 24: services.ReqUpdateResource
+	(*ResUpdateResource)(nil),              // 25: services.ResUpdateResource
+	(*ReqDeleteResource)(nil),              // 26: services.ReqDeleteResource
+	(*ResDeleteResource)(nil),              // 27: services.ResDeleteResource
+	(*ReqGetResources)(nil),                // 28: services.ReqGetResources
+	(*ResGetResources)(nil),                // 29: services.ResGetResources
+	(*ReqDeleteResource_ResourceData)(nil), // 30: services.ReqDeleteResource.ResourceData
+	(*events.Client)(nil),                  // 31: events.Client
+	(enums.DeleteType)(0),                  // 32: enums.DeleteType
+	(*duration.Duration)(nil),              // 33: google.protobuf.Duration
+	(*events.Cluster)(nil),                 // 34: events.Cluster
+	(*events.Resource)(nil),                // 35: events.Resource
 }
 var file_proto_services_auth_proto_depIdxs = []int32{
-	14, // 0: services.ReqCreateClient.client:type_name -> events.Client
-	14, // 1: services.ReqUpdateClient.client:type_name -> events.Client
-	15, // 2: services.ReqDeleteClient.delete_type:type_name -> enums.DeleteType
-	16, // 3: services.ReqGenerateToken.ext_duration:type_name -> google.protobuf.Duration
-	16, // 4: services.ReqRefreshToken.ext_duration:type_name -> google.protobuf.Duration
-	14, // 5: services.ResGetClientData.client:type_name -> events.Client
-	0,  // 6: services.AuthService.CreateClient:input_type -> services.ReqCreateClient
-	4,  // 7: services.AuthService.UpdateClient:input_type -> services.ReqUpdateClient
-	6,  // 8: services.AuthService.DeleteClient:input_type -> services.ReqDeleteClient
-	12, // 9: services.AuthService.GetClientData:input_type -> services.ReqGetClientData
-	8,  // 10: services.AuthService.GenerateToken:input_type -> services.ReqGenerateToken
-	10, // 11: services.AuthService.RefreshToken:input_type -> services.ReqRefreshToken
-	2,  // 12: services.AuthService.InvalidateAllTokens:input_type -> services.ReqInvalidateAllTokens
-	1,  // 13: services.AuthService.CreateClient:output_type -> services.ResCreateClient
-	5,  // 14: services.AuthService.UpdateClient:output_type -> services.ResUpdateClient
-	7,  // 15: services.AuthService.DeleteClient:output_type -> services.ResDeleteClient
-	13, // 16: services.AuthService.GetClientData:output_type -> services.ResGetClientData
-	9,  // 17: services.AuthService.GenerateToken:output_type -> services.ResGenerateToken
-	11, // 18: services.AuthService.RefreshToken:output_type -> services.ResRefreshToken
-	3,  // 19: services.AuthService.InvalidateAllTokens:output_type -> services.ResInvalidateAllTokens
-	13, // [13:20] is the sub-list for method output_type
-	6,  // [6:13] is the sub-list for method input_type
-	6,  // [6:6] is the sub-list for extension type_name
-	6,  // [6:6] is the sub-list for extension extendee
-	0,  // [0:6] is the sub-list for field type_name
+	31, // 0: services.ReqCreateClient.client:type_name -> events.Client
+	31, // 1: services.ReqUpdateClient.client:type_name -> events.Client
+	32, // 2: services.ReqDeleteClient.delete_type:type_name -> enums.DeleteType
+	33, // 3: services.ReqGenerateToken.ext_duration:type_name -> google.protobuf.Duration
+	33, // 4: services.ReqRefreshToken.ext_duration:type_name -> google.protobuf.Duration
+	31, // 5: services.ResGetClientData.client:type_name -> events.Client
+	34, // 6: services.ReqAddCluster.cluster:type_name -> events.Cluster
+	34, // 7: services.ReqUpdateCluster.cluster:type_name -> events.Cluster
+	32, // 8: services.ReqDeleteCluster.delete_type:type_name -> enums.DeleteType
+	34, // 9: services.ResGetCluster.cluster:type_name -> events.Cluster
+	35, // 10: services.ReqAddResource.resource:type_name -> events.Resource
+	35, // 11: services.ReqUpdateResource.resource:type_name -> events.Resource
+	32, // 12: services.ReqDeleteResource.delete_type:type_name -> enums.DeleteType
+	35, // 13: services.ResGetResources.resources:type_name -> events.Resource
+	0,  // 14: services.AuthService.CreateClient:input_type -> services.ReqCreateClient
+	4,  // 15: services.AuthService.UpdateClient:input_type -> services.ReqUpdateClient
+	6,  // 16: services.AuthService.DeleteClient:input_type -> services.ReqDeleteClient
+	12, // 17: services.AuthService.GetClientData:input_type -> services.ReqGetClientData
+	14, // 18: services.AuthService.AddCluster:input_type -> services.ReqAddCluster
+	16, // 19: services.AuthService.UpdateCluster:input_type -> services.ReqUpdateCluster
+	18, // 20: services.AuthService.DeleteCluster:input_type -> services.ReqDeleteCluster
+	20, // 21: services.AuthService.GetCluster:input_type -> services.ReqGetCluster
+	22, // 22: services.AuthService.AddResource:input_type -> services.ReqAddResource
+	24, // 23: services.AuthService.UpdateResource:input_type -> services.ReqUpdateResource
+	26, // 24: services.AuthService.DeleteResource:input_type -> services.ReqDeleteResource
+	28, // 25: services.AuthService.GetResources:input_type -> services.ReqGetResources
+	8,  // 26: services.AuthService.GenerateToken:input_type -> services.ReqGenerateToken
+	10, // 27: services.AuthService.RefreshToken:input_type -> services.ReqRefreshToken
+	2,  // 28: services.AuthService.InvalidateAllTokens:input_type -> services.ReqInvalidateAllTokens
+	1,  // 29: services.AuthService.CreateClient:output_type -> services.ResCreateClient
+	5,  // 30: services.AuthService.UpdateClient:output_type -> services.ResUpdateClient
+	7,  // 31: services.AuthService.DeleteClient:output_type -> services.ResDeleteClient
+	13, // 32: services.AuthService.GetClientData:output_type -> services.ResGetClientData
+	15, // 33: services.AuthService.AddCluster:output_type -> services.ResAddCluster
+	17, // 34: services.AuthService.UpdateCluster:output_type -> services.ResUpdateCluster
+	19, // 35: services.AuthService.DeleteCluster:output_type -> services.ResDeleteCluster
+	21, // 36: services.AuthService.GetCluster:output_type -> services.ResGetCluster
+	23, // 37: services.AuthService.AddResource:output_type -> services.ResAddResource
+	25, // 38: services.AuthService.UpdateResource:output_type -> services.ResUpdateResource
+	27, // 39: services.AuthService.DeleteResource:output_type -> services.ResDeleteResource
+	29, // 40: services.AuthService.GetResources:output_type -> services.ResGetResources
+	9,  // 41: services.AuthService.GenerateToken:output_type -> services.ResGenerateToken
+	11, // 42: services.AuthService.RefreshToken:output_type -> services.ResRefreshToken
+	3,  // 43: services.AuthService.InvalidateAllTokens:output_type -> services.ResInvalidateAllTokens
+	29, // [29:44] is the sub-list for method output_type
+	14, // [14:29] is the sub-list for method input_type
+	14, // [14:14] is the sub-list for extension type_name
+	14, // [14:14] is the sub-list for extension extendee
+	0,  // [0:14] is the sub-list for field type_name
 }
 
 func init() { file_proto_services_auth_proto_init() }
@@ -1218,6 +2283,210 @@ func file_proto_services_auth_proto_init() {
 				return nil
 			}
 		}
+		file_proto_services_auth_proto_msgTypes[14].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ReqAddCluster); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_proto_services_auth_proto_msgTypes[15].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ResAddCluster); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_proto_services_auth_proto_msgTypes[16].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ReqUpdateCluster); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_proto_services_auth_proto_msgTypes[17].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ResUpdateCluster); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_proto_services_auth_proto_msgTypes[18].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ReqDeleteCluster); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_proto_services_auth_proto_msgTypes[19].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ResDeleteCluster); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_proto_services_auth_proto_msgTypes[20].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ReqGetCluster); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_proto_services_auth_proto_msgTypes[21].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ResGetCluster); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_proto_services_auth_proto_msgTypes[22].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ReqAddResource); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_proto_services_auth_proto_msgTypes[23].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ResAddResource); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_proto_services_auth_proto_msgTypes[24].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ReqUpdateResource); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_proto_services_auth_proto_msgTypes[25].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ResUpdateResource); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_proto_services_auth_proto_msgTypes[26].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ReqDeleteResource); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_proto_services_auth_proto_msgTypes[27].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ResDeleteResource); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_proto_services_auth_proto_msgTypes[28].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ReqGetResources); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_proto_services_auth_proto_msgTypes[29].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ResGetResources); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_proto_services_auth_proto_msgTypes[30].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*ReqDeleteResource_ResourceData); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	file_proto_services_auth_proto_msgTypes[2].OneofWrappers = []interface{}{
 		(*ReqInvalidateAllTokens_Name)(nil),
@@ -1239,13 +2508,26 @@ func file_proto_services_auth_proto_init() {
 		(*ReqGetClientData_Name)(nil),
 		(*ReqGetClientData_ClusterId)(nil),
 	}
+	file_proto_services_auth_proto_msgTypes[18].OneofWrappers = []interface{}{
+		(*ReqDeleteCluster_Name)(nil),
+		(*ReqDeleteCluster_ClusterId)(nil),
+	}
+	file_proto_services_auth_proto_msgTypes[20].OneofWrappers = []interface{}{
+		(*ReqGetCluster_Name)(nil),
+		(*ReqGetCluster_ClusterId)(nil),
+	}
+	file_proto_services_auth_proto_msgTypes[28].OneofWrappers = []interface{}{
+		(*ReqGetResources_Name)(nil),
+		(*ReqGetResources_ClusterId)(nil),
+		(*ReqGetResources_Namespace)(nil),
+	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_proto_services_auth_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   14,
+			NumMessages:   31,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
@@ -1271,10 +2553,23 @@ const _ = grpc.SupportPackageIsVersion6
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type AuthServiceClient interface {
+	// TODO: add methods for get lists of any objects with optional filters and pagination...
+	// client API
 	CreateClient(ctx context.Context, in *ReqCreateClient, opts ...grpc.CallOption) (*ResCreateClient, error)
 	UpdateClient(ctx context.Context, in *ReqUpdateClient, opts ...grpc.CallOption) (*ResUpdateClient, error)
 	DeleteClient(ctx context.Context, in *ReqDeleteClient, opts ...grpc.CallOption) (*ResDeleteClient, error)
 	GetClientData(ctx context.Context, in *ReqGetClientData, opts ...grpc.CallOption) (*ResGetClientData, error)
+	// cluster API
+	AddCluster(ctx context.Context, in *ReqAddCluster, opts ...grpc.CallOption) (*ResAddCluster, error)
+	UpdateCluster(ctx context.Context, in *ReqUpdateCluster, opts ...grpc.CallOption) (*ResUpdateCluster, error)
+	DeleteCluster(ctx context.Context, in *ReqDeleteCluster, opts ...grpc.CallOption) (*ResDeleteCluster, error)
+	GetCluster(ctx context.Context, in *ReqGetCluster, opts ...grpc.CallOption) (*ResGetCluster, error)
+	// resource API
+	AddResource(ctx context.Context, in *ReqAddResource, opts ...grpc.CallOption) (*ResAddResource, error)
+	UpdateResource(ctx context.Context, in *ReqUpdateResource, opts ...grpc.CallOption) (*ResUpdateResource, error)
+	DeleteResource(ctx context.Context, in *ReqDeleteResource, opts ...grpc.CallOption) (*ResDeleteResource, error)
+	GetResources(ctx context.Context, in *ReqGetResources, opts ...grpc.CallOption) (*ResGetResources, error)
+	// token API
 	GenerateToken(ctx context.Context, in *ReqGenerateToken, opts ...grpc.CallOption) (*ResGenerateToken, error)
 	RefreshToken(ctx context.Context, in *ReqRefreshToken, opts ...grpc.CallOption) (*ResRefreshToken, error)
 	InvalidateAllTokens(ctx context.Context, in *ReqInvalidateAllTokens, opts ...grpc.CallOption) (*ResInvalidateAllTokens, error)
@@ -1324,6 +2619,78 @@ func (c *authServiceClient) GetClientData(ctx context.Context, in *ReqGetClientD
 	return out, nil
 }
 
+func (c *authServiceClient) AddCluster(ctx context.Context, in *ReqAddCluster, opts ...grpc.CallOption) (*ResAddCluster, error) {
+	out := new(ResAddCluster)
+	err := c.cc.Invoke(ctx, "/services.AuthService/AddCluster", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *authServiceClient) UpdateCluster(ctx context.Context, in *ReqUpdateCluster, opts ...grpc.CallOption) (*ResUpdateCluster, error) {
+	out := new(ResUpdateCluster)
+	err := c.cc.Invoke(ctx, "/services.AuthService/UpdateCluster", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *authServiceClient) DeleteCluster(ctx context.Context, in *ReqDeleteCluster, opts ...grpc.CallOption) (*ResDeleteCluster, error) {
+	out := new(ResDeleteCluster)
+	err := c.cc.Invoke(ctx, "/services.AuthService/DeleteCluster", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *authServiceClient) GetCluster(ctx context.Context, in *ReqGetCluster, opts ...grpc.CallOption) (*ResGetCluster, error) {
+	out := new(ResGetCluster)
+	err := c.cc.Invoke(ctx, "/services.AuthService/GetCluster", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *authServiceClient) AddResource(ctx context.Context, in *ReqAddResource, opts ...grpc.CallOption) (*ResAddResource, error) {
+	out := new(ResAddResource)
+	err := c.cc.Invoke(ctx, "/services.AuthService/AddResource", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *authServiceClient) UpdateResource(ctx context.Context, in *ReqUpdateResource, opts ...grpc.CallOption) (*ResUpdateResource, error) {
+	out := new(ResUpdateResource)
+	err := c.cc.Invoke(ctx, "/services.AuthService/UpdateResource", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *authServiceClient) DeleteResource(ctx context.Context, in *ReqDeleteResource, opts ...grpc.CallOption) (*ResDeleteResource, error) {
+	out := new(ResDeleteResource)
+	err := c.cc.Invoke(ctx, "/services.AuthService/DeleteResource", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *authServiceClient) GetResources(ctx context.Context, in *ReqGetResources, opts ...grpc.CallOption) (*ResGetResources, error) {
+	out := new(ResGetResources)
+	err := c.cc.Invoke(ctx, "/services.AuthService/GetResources", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 func (c *authServiceClient) GenerateToken(ctx context.Context, in *ReqGenerateToken, opts ...grpc.CallOption) (*ResGenerateToken, error) {
 	out := new(ResGenerateToken)
 	err := c.cc.Invoke(ctx, "/services.AuthService/GenerateToken", in, out, opts...)
@@ -1353,10 +2720,23 @@ func (c *authServiceClient) InvalidateAllTokens(ctx context.Context, in *ReqInva
 
 // AuthServiceServer is the server API for AuthService service.
 type AuthServiceServer interface {
+	// TODO: add methods for get lists of any objects with optional filters and pagination...
+	// client API
 	CreateClient(context.Context, *ReqCreateClient) (*ResCreateClient, error)
 	UpdateClient(context.Context, *ReqUpdateClient) (*ResUpdateClient, error)
 	DeleteClient(context.Context, *ReqDeleteClient) (*ResDeleteClient, error)
 	GetClientData(context.Context, *ReqGetClientData) (*ResGetClientData, error)
+	// cluster API
+	AddCluster(context.Context, *ReqAddCluster) (*ResAddCluster, error)
+	UpdateCluster(context.Context, *ReqUpdateCluster) (*ResUpdateCluster, error)
+	DeleteCluster(context.Context, *ReqDeleteCluster) (*ResDeleteCluster, error)
+	GetCluster(context.Context, *ReqGetCluster) (*ResGetCluster, error)
+	// resource API
+	AddResource(context.Context, *ReqAddResource) (*ResAddResource, error)
+	UpdateResource(context.Context, *ReqUpdateResource) (*ResUpdateResource, error)
+	DeleteResource(context.Context, *ReqDeleteResource) (*ResDeleteResource, error)
+	GetResources(context.Context, *ReqGetResources) (*ResGetResources, error)
+	// token API
 	GenerateToken(context.Context, *ReqGenerateToken) (*ResGenerateToken, error)
 	RefreshToken(context.Context, *ReqRefreshToken) (*ResRefreshToken, error)
 	InvalidateAllTokens(context.Context, *ReqInvalidateAllTokens) (*ResInvalidateAllTokens, error)
@@ -1377,6 +2757,30 @@ func (*UnimplementedAuthServiceServer) DeleteClient(context.Context, *ReqDeleteC
 }
 func (*UnimplementedAuthServiceServer) GetClientData(context.Context, *ReqGetClientData) (*ResGetClientData, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetClientData not implemented")
+}
+func (*UnimplementedAuthServiceServer) AddCluster(context.Context, *ReqAddCluster) (*ResAddCluster, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method AddCluster not implemented")
+}
+func (*UnimplementedAuthServiceServer) UpdateCluster(context.Context, *ReqUpdateCluster) (*ResUpdateCluster, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UpdateCluster not implemented")
+}
+func (*UnimplementedAuthServiceServer) DeleteCluster(context.Context, *ReqDeleteCluster) (*ResDeleteCluster, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method DeleteCluster not implemented")
+}
+func (*UnimplementedAuthServiceServer) GetCluster(context.Context, *ReqGetCluster) (*ResGetCluster, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetCluster not implemented")
+}
+func (*UnimplementedAuthServiceServer) AddResource(context.Context, *ReqAddResource) (*ResAddResource, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method AddResource not implemented")
+}
+func (*UnimplementedAuthServiceServer) UpdateResource(context.Context, *ReqUpdateResource) (*ResUpdateResource, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UpdateResource not implemented")
+}
+func (*UnimplementedAuthServiceServer) DeleteResource(context.Context, *ReqDeleteResource) (*ResDeleteResource, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method DeleteResource not implemented")
+}
+func (*UnimplementedAuthServiceServer) GetResources(context.Context, *ReqGetResources) (*ResGetResources, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetResources not implemented")
 }
 func (*UnimplementedAuthServiceServer) GenerateToken(context.Context, *ReqGenerateToken) (*ResGenerateToken, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GenerateToken not implemented")
@@ -1464,6 +2868,150 @@ func _AuthService_GetClientData_Handler(srv interface{}, ctx context.Context, de
 	return interceptor(ctx, in, info, handler)
 }
 
+func _AuthService_AddCluster_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ReqAddCluster)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AuthServiceServer).AddCluster(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/services.AuthService/AddCluster",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AuthServiceServer).AddCluster(ctx, req.(*ReqAddCluster))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _AuthService_UpdateCluster_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ReqUpdateCluster)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AuthServiceServer).UpdateCluster(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/services.AuthService/UpdateCluster",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AuthServiceServer).UpdateCluster(ctx, req.(*ReqUpdateCluster))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _AuthService_DeleteCluster_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ReqDeleteCluster)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AuthServiceServer).DeleteCluster(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/services.AuthService/DeleteCluster",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AuthServiceServer).DeleteCluster(ctx, req.(*ReqDeleteCluster))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _AuthService_GetCluster_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ReqGetCluster)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AuthServiceServer).GetCluster(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/services.AuthService/GetCluster",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AuthServiceServer).GetCluster(ctx, req.(*ReqGetCluster))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _AuthService_AddResource_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ReqAddResource)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AuthServiceServer).AddResource(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/services.AuthService/AddResource",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AuthServiceServer).AddResource(ctx, req.(*ReqAddResource))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _AuthService_UpdateResource_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ReqUpdateResource)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AuthServiceServer).UpdateResource(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/services.AuthService/UpdateResource",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AuthServiceServer).UpdateResource(ctx, req.(*ReqUpdateResource))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _AuthService_DeleteResource_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ReqDeleteResource)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AuthServiceServer).DeleteResource(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/services.AuthService/DeleteResource",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AuthServiceServer).DeleteResource(ctx, req.(*ReqDeleteResource))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _AuthService_GetResources_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ReqGetResources)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AuthServiceServer).GetResources(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/services.AuthService/GetResources",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AuthServiceServer).GetResources(ctx, req.(*ReqGetResources))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 func _AuthService_GenerateToken_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(ReqGenerateToken)
 	if err := dec(in); err != nil {
@@ -1537,6 +3085,38 @@ var _AuthService_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetClientData",
 			Handler:    _AuthService_GetClientData_Handler,
+		},
+		{
+			MethodName: "AddCluster",
+			Handler:    _AuthService_AddCluster_Handler,
+		},
+		{
+			MethodName: "UpdateCluster",
+			Handler:    _AuthService_UpdateCluster_Handler,
+		},
+		{
+			MethodName: "DeleteCluster",
+			Handler:    _AuthService_DeleteCluster_Handler,
+		},
+		{
+			MethodName: "GetCluster",
+			Handler:    _AuthService_GetCluster_Handler,
+		},
+		{
+			MethodName: "AddResource",
+			Handler:    _AuthService_AddResource_Handler,
+		},
+		{
+			MethodName: "UpdateResource",
+			Handler:    _AuthService_UpdateResource_Handler,
+		},
+		{
+			MethodName: "DeleteResource",
+			Handler:    _AuthService_DeleteResource_Handler,
+		},
+		{
+			MethodName: "GetResources",
+			Handler:    _AuthService_GetResources_Handler,
 		},
 		{
 			MethodName: "GenerateToken",
