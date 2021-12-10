@@ -18,6 +18,7 @@ enum MetricsType {
   Logs = 4;
   Nginx = 5;
   ReplicasCount = 6;
+  Geth = 7;
 }
 
 enum ResourceType {
