@@ -8,9 +8,12 @@ import "proto/enums/provider.proto";
 
 message Client {
   string name = 1; // @gotags: validate:"ascii"
-  bytes rsa_key = 3;
-  enums.KeyType key_type = 4;
-  repeated Cluster clusters = 5;
+  string public_id = 2; // @gotags: validate:"omitempty,uuid_if_not_empty"
+  bytes rsa_key = 4;
+  string api_key = 5; // @gotags: validate:"omitempty,jwt_if_not_empty"
+  string hubspot_id = 6;
+  enums.KeyType key_type = 7;
+  repeated Cluster clusters = 8;
 }
 
 message Cluster {
