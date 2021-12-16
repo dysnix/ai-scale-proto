@@ -35,7 +35,9 @@ message ReqCreateClient {
   events.Client client = 1;
 }
 
-message ResCreateClient {}
+message ResCreateClient {
+  string public_id = 1;
+}
 
 message ReqInvalidateAllTokens {
   oneof ClientData {
