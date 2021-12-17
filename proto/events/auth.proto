@@ -11,9 +11,10 @@ message Client {
   string public_id = 2; // @gotags: validate:"omitempty,uuid_if_not_empty"
   bytes rsa_key = 4;
   string api_key = 5; // @gotags: validate:"omitempty,jwt_if_not_empty"
-  string hubspot_id = 6;
-  enums.KeyType key_type = 7;
-  repeated Cluster clusters = 8;
+  string email = 6; // @gotags: validate:"omitempty,email_if_not_empty"
+  string hubspot_id = 7;
+  enums.KeyType key_type = 8;
+  repeated Cluster clusters = 9;
 }
 
 message Cluster {
